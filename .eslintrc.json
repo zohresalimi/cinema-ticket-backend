@@ -1,0 +1,38 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "prettier", 
+        "airbnb-base"
+      ],
+    "plugins": [
+        "prettier"
+      ],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+              "endOfLine": "auto"
+            }
+          ],
+          "linebreak-style": 0,
+          "trailing-comma": 0,
+          "comma-dangle": 0,
+          "no-underscore-dangle": 0,
+          "no-unused-vars": [
+            "error",
+            {
+              "varsIgnorePattern": "[iI]gnored"
+            }
+          ],
+          "import/no-extraneous-dependencies": [
+            "error",
+            {
+              "devDependencies": true
+            }
+          ]
+    }
+}
