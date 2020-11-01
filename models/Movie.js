@@ -3,17 +3,17 @@ const mongoose = require('mongoose');
 const MovieSchema = mongoose.Schema({
   name: String,
   description: String,
-  videoUrl: String,
+  trailerUrl: String,
   type: String,
   duration: String,
   age: String,
   history: String,
   Director: String,
-  Actor: String,
+  Actors: [],
   originalTitle: String,
   originalLanguage: String,
   images: [],
-  salond: { type: mongoose.Schema.Types.ObjectId, ref: 'Salon' },
+  roomId: { type: mongoose.Schema.Types.ObjectId, ref: 'Room' },
   price: Number,
 });
 

@@ -9,3 +9,12 @@ node_modules/
 
 # Optional eslint cache
 .eslintcache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+lerna-debug.log*
+
+# Optional eslint cache
+.eslintcache

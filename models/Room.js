@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const SalonSchema = mongoose.Schema({
+const RoomSchema = mongoose.Schema({
   name: String,
   capacity: Number,
   cinemaId: { type: mongoose.Schema.Types.ObjectId, ref: 'Cinema' },
@@ -8,6 +8,6 @@ const SalonSchema = mongoose.Schema({
 });
 
 module.exports = {
-  Salon: mongoose.model('Salon', SalonSchema),
-  SalonSchema,
+  Room: mongoose.model('Room', RoomSchema),
+  RoomSchema,
 };

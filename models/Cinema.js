@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const CinemaSchema = mongoose.Schema({
-  name: String,
-  purchaseStartTime: Date,
-  purchaseEndTime: Date,
-  salons: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Salon' }],
+  name: { type: String, required: true },
+  purchaseStartTime: String,
+  purchaseEndTime: String,
+  rooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room' }],
 });
 
 module.exports = mongoose.model('Cinema', CinemaSchema);

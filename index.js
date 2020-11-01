@@ -1,22 +1,22 @@
 const express = require('express');
 const cors = require('cors');
 const { connect } = require('./config/database');
+const routes = require('./routes');
 
 const app = express();
 const port = 6000;
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
-const authRoute = require('./routes/authentication');
+// routes
+app.use('/api/v1', routes);
 
 // get, delete, post, put
 app.get('/', (req, res) => {
   res.json({ message: 'Hello' });
 });
 
-// routes
-app.use('/', authRoute);
-
 connect();
+// eslint-disable-next-line no-console
 app.listen(port, () => console.log('server is running .....'));

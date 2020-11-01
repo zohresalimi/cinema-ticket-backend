@@ -21,7 +21,9 @@ const connect = async () => {
     const opts = {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
     };
+
     await mongoose.connect(mongoConnectionString, opts);
   } catch (err) {
     throw new Error(
