@@ -7,7 +7,7 @@ const MovieSchema = mongoose.Schema({
   type: String,
   duration: String,
   age: String,
-  history: String,
+  coverImage: String,
   Director: String,
   Actors: [],
   originalTitle: String,
@@ -17,7 +17,4 @@ const MovieSchema = mongoose.Schema({
   price: Number,
 });
 
-module.exports = {
-  Movie: mongoose.model('Movie', MovieSchema),
-  MovieSchema,
-};
+module.exports = mongoose.model('Movie', MovieSchema);

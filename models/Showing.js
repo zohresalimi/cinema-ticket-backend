@@ -8,3 +8,5 @@ const ShowingSchema = mongoose.Schema({
   endTime: Date,
   capacity: Number,
 });
+
+module.exports = mongoose.model('Showing', ShowingSchema);

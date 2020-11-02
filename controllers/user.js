@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // Models
-const User = require('../models/user');
+const User = require('../models/User');
 
 // signup method
 router.post('/signup', async (req, res) => {
