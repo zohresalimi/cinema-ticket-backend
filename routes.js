@@ -2,16 +2,23 @@ const express = require('express');
 
 const app = express.Router();
 const cinema = require('./controllers/cinema');
+const room = require('./controllers/room');
 
 // Cinema endpoints
 app.route('/cinema').get(cinema.getAll).post(cinema.createOne);
-app.route('/cinema/:id');
-//   .get(cinema.getOne)
-//   .put(cinema.updateOne)
-//   .delete(cinema.deleteOne);
+app
+  .route('/cinema/:id')
+  .get(cinema.getOne)
+  .put(cinema.updateOne)
+  .delete(cinema.deleteOne);
 
-// app.post('/cinema/:id/movies', actors.addMovie);
-// app.delete('/cinema/:id/movies/:mid', actors.deleteMovie);
+// Room endpoints
+app.route('/room').get(room.getAll).post(room.createOne);
+app
+  .route('/room/:id')
+  .get(room.getOne)
+  .put(room.updateOne)
+  .delete(room.deleteOne);
 
 // movies endpoints
 // app.route('/movies').get(movies.getAll).post(movies.createOne);
