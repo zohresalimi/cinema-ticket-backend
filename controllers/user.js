@@ -9,7 +9,7 @@ const User = require('../models/User');
 router.post('/signup', async (req, res) => {
   const { name, email, phoneNumber } = req.body;
   try {
-    await User.create({ name, email, phoneNumber });
+    const user = await User.create({ name, email, phoneNumber });
     return res.status(201).json({ user, message: 'user is created' });
   } catch (error) {
     throw new Error(error);

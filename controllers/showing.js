@@ -1,4 +1,6 @@
-const Ticket = require('../models/Tickets');
+const Cinema = require('../models/Cinema');
+const Room = require('../models/Room');
+const Showing = require('../models/Showing');
 
 module.exports = {
   async getAll(req, res) {

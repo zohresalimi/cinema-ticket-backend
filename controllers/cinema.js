@@ -39,6 +39,21 @@ module.exports = {
     }
   },
 
+  async getByListId({ body }, res) {
+    const { rooms: rids } = body;
+    try {
+      const response = await Cinema.find({ rooms: { $in: rids } })
+        .populate('room')
+        .exec();
+      if (!response) {
+        return res.status(404).json({ message: 'Room not found' });
+      }
+      return res.status(200).json({ data: response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
+
   async updateOne({ params, body }, res) {
     const { id } = params;
     const opt = { new: true };

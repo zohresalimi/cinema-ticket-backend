@@ -4,9 +4,11 @@ const app = express.Router();
 const cinema = require('./controllers/cinema');
 const room = require('./controllers/room');
 const movies = require('./controllers/movie');
+const showings = require('./controllers/showing');
 
 // Cinema endpoints
 app.route('/cinemas').get(cinema.getAll).post(cinema.createOne);
+app.route('/cinemas/byIds').get(cinema.getByListId);
 app
   .route('/cinemas/:id')
   .get(cinema.getOne)
@@ -33,5 +35,11 @@ app
   .route('/movies/:id/room/:rid')
   .put(movies.addRoom)
   .delete(movies.deleteRoom);
+
+// Showing endpoints
+app.route('/showings').get(showings.getAll).post(showings.createOne);
+
+// Ticket endpoints
+app.route('/Ticket').get(showings.getAll).post(showings.createOne);
 
 module.exports = app;
