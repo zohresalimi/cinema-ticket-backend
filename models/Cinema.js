@@ -4,7 +4,7 @@ const CinemaSchema = mongoose.Schema({
   name: { type: String, required: true },
   purchaseStartTime: String,
   purchaseEndTime: String,
-  rooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room' }],
+  rooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room', default: [] }],
 });
 
 module.exports = mongoose.model('Cinema', CinemaSchema);

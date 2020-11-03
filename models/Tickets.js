@@ -10,9 +10,9 @@ const TicketSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
   },
-  movieId: { type: mongoose.Schema.Types.ObjectId, ref: 'Movie' },
-  cinemaId: { type: mongoose.Schema.Types.ObjectId, ref: 'Cinema' },
-  roomId: { type: mongoose.Schema.Types.ObjectId, ref: 'Room' },
+  movie: { type: mongoose.Schema.Types.ObjectId, ref: 'Movie' },
+  cinema: { type: mongoose.Schema.Types.ObjectId, ref: 'Cinema' },
+  room: { type: mongoose.Schema.Types.ObjectId, ref: 'Room' },
 });
 
 module.exports = mongoose.model('Ticket', TicketSchema);

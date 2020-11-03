@@ -14,28 +14,22 @@ module.exports = {
   },
 
   async createOne(req, res) {
-    const { name, purchaseStartTime, purchaseEndTime, rooms } = req.body;
     try {
-      if (!name) {
+      if (!req.body.name) {
         return res
           .status(400)
           .json({ message: 'Name parameter was not provided!' });
       }
-      const response = await Cinema.create({
-        name,
-        purchaseStartTime,
-        purchaseEndTime,
-        rooms,
-      });
+      const response = await Cinema.create(req.body);
       return res.status(201).json({ data: response });
     } catch (error) {
       return res.status(500).json({ error: error.toString() });
     }
   },
 
-  async getOne(req, res) {
+  async getOne({ params }, res) {
     try {
-      const response = await Cinema.findById(req.params.id);
+      const response = await Cinema.findById(params.id);
       if (!response) {
         return res.status(404).json({ message: 'Cinema not found' });
       }
@@ -45,9 +39,8 @@ module.exports = {
     }
   },
 
-  async updateOne(req, res) {
-    const { id } = req.params;
-    const { body } = req;
+  async updateOne({ params, body }, res) {
+    const { id } = params;
     const opt = { new: true };
     let updated = false;
     try {
@@ -64,8 +57,8 @@ module.exports = {
     }
   },
 
-  async deleteOne(req, res) {
-    const { id } = req.params;
+  async deleteOne({ params }, res) {
+    const { id } = params;
     let deleted = false;
     try {
       const response = await Cinema.findByIdAndRemove(id);

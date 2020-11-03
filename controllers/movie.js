@@ -13,56 +13,23 @@ module.exports = {
     }
   },
 
-  async createOne(req, res) {
-    const {
-      name,
-      description,
-      trailerUrl,
-      type,
-      duration,
-      age,
-      coverImage,
-      Director,
-      Actors,
-      originalTitle,
-      originalLanguage,
-      images,
-      roomId,
-      price,
-    } = req.body;
-
-    console.log(req.body);
+  async createOne({ body }, res) {
     try {
-      if (!name) {
+      if (!body.name) {
         return res
           .status(400)
           .json({ message: 'Name parameter was not provided!' });
       }
-      const response = await Movie.create({
-        name,
-        description,
-        trailerUrl,
-        type,
-        duration,
-        age,
-        coverImage,
-        Director,
-        Actors,
-        originalTitle,
-        originalLanguage,
-        images,
-        roomId,
-        price,
-      });
+      const response = await Movie.create(body);
       return res.status(201).json({ data: response });
     } catch (error) {
       return res.status(500).json({ error: error.toString() });
     }
   },
 
-  async getOne(req, res) {
+  async getOne({ params }, res) {
     try {
-      const response = await Movie.findById(req.params.id);
+      const response = await Movie.findById(params.id);
       if (!response) {
         return res.status(404).json({ message: 'Movie not found' });
       }
@@ -72,9 +39,8 @@ module.exports = {
     }
   },
 
-  async updateOne(req, res) {
-    const { id } = req.params;
-    const { body } = req;
+  async updateOne({ params, body }, res) {
+    const { id } = params;
     const opt = { new: true };
     let updated = false;
     try {
@@ -91,8 +57,31 @@ module.exports = {
     }
   },
 
-  async deleteOne(req, res) {
-    const { id } = req.params;
+  async addRoom({ params }, res) {
+    const { id, roomid } = params;
+    const opt = { new: true };
+    let updated = false;
+    try {
+      const response = await Movie.findByIdAndUpdate(
+        { _id: id },
+        { $addToSet: { rooms: roomid } },
+        opt
+      ).exec();
+
+      if (!response) {
+        return res
+          .status(404)
+          .json({ status: updated, message: 'Movie not found' });
+      }
+      updated = true;
+      return res.status(200).json({ status: updated, data: response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
+
+  async deleteOne({ params }, res) {
+    const { id } = params;
     let deleted = false;
     try {
       const response = await Movie.findByIdAndRemove(id);

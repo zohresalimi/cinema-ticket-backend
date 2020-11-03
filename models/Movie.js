@@ -9,12 +9,13 @@ const MovieSchema = mongoose.Schema({
   age: String,
   coverImage: String,
   Director: String,
-  Actors: [],
+  actors: { default: [] },
   originalTitle: String,
   originalLanguage: String,
-  images: [],
-  roomId: { type: mongoose.Schema.Types.ObjectId, ref: 'Room' },
+  images: { default: [] },
+  rooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room', default: [] }],
   price: Number,
+  premiere: Date,
 });
 
 module.exports = mongoose.model('Movie', MovieSchema);

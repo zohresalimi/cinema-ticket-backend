@@ -6,7 +6,7 @@ function create2DArray(rows, columns) {
   for (let i = 0; i < rows; i++) {
     array[i] = new Array(columns);
     for (let j = 0; j < columns; j++) {
-      array[i][j] = false;
+      array[i][j] = { seatNumber: j, taken: false };
     }
   }
 
@@ -25,8 +25,8 @@ module.exports = {
     }
   },
 
-  async createOne(req, res) {
-    const { name, capacity, cinemaId, seats } = req.body;
+  async createOne({ body }, res) {
+    const { name, capacity, cinema, seats } = body;
 
     try {
       if (!name) {
@@ -38,11 +38,11 @@ module.exports = {
       const response = await Room.create({
         name,
         capacity,
-        cinemaId,
+        cinema,
         seats: roomPlan,
       });
       await Cinema.updateOne(
-        { _id: cinemaId },
+        { _id: cinema },
         { $push: { rooms: response._id } }
       );
 
@@ -52,9 +52,9 @@ module.exports = {
     }
   },
 
-  async getOne(req, res) {
+  async getOne({ params }, res) {
     try {
-      const response = await Room.findById(req.params.id);
+      const response = await Room.findById(params.id);
       if (!response) {
         return res.status(404).json({ message: 'Room not found' });
       }
@@ -64,11 +64,11 @@ module.exports = {
     }
   },
 
-  async getByListId(req, res) {
-    const { roomsId } = req.body;
+  async getByListId({ body }, res) {
+    const { rooms } = body;
     try {
-      const response = await Room.find({ _id: { $in: roomsId } })
-        .populate('cinemaId')
+      const response = await Room.find({ _id: { $in: rooms } })
+        .populate('cinema')
         .exec();
 
       if (!response) {
@@ -80,13 +80,20 @@ module.exports = {
     }
   },
 
-  async updateOne(req, res) {
-    const { id } = req.params;
-    const { body } = req;
+  async updateOne({ params, body }, res) {
+    const { id } = params;
+    const { name, capacity, cinema, seats } = body;
     const opt = { new: true };
     let updated = false;
     try {
-      const response = await Room.findByIdAndUpdate(id, body, opt);
+      const roomPlan = create2DArray(seats[0], seats[1]);
+      const updateData = {
+        name,
+        capacity,
+        cinema,
+        seats: roomPlan,
+      };
+      const response = await Room.findByIdAndUpdate(id, updateData, opt);
       if (!response) {
         return res.status(404).json({
           status: updated,
@@ -103,8 +110,8 @@ module.exports = {
     }
   },
 
-  async deleteOne(req, res) {
-    const { id } = req.params;
+  async deleteOne({ params }, res) {
+    const { id } = params;
     let deleted = false;
     try {
       const response = await Room.findByIdAndRemove(id);
@@ -114,6 +121,14 @@ module.exports = {
           message: 'Room not found',
         });
       }
+      const cinema = await Cinema.findById(response.cinema);
+      for (let i = 0; i < cinema.rooms.length; i++) {
+        if (cinema.rooms[i].equals(response._id)) {
+          cinema.rooms.splice(i, 1);
+          break;
+        }
+      }
+      await cinema.save();
       deleted = true;
       return res.status(200).json({
         status: deleted,
