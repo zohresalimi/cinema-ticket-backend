@@ -58,13 +58,13 @@ module.exports = {
   },
 
   async addRoom({ params }, res) {
-    const { id, roomid } = params;
+    const { id, rid } = params;
     const opt = { new: true };
     let updated = false;
     try {
       const response = await Movie.findByIdAndUpdate(
         { _id: id },
-        { $addToSet: { rooms: roomid } },
+        { $addToSet: { rooms: rid } },
         opt
       ).exec();
 
@@ -92,6 +92,29 @@ module.exports = {
       }
       deleted = true;
       return res.status(200).json({ status: deleted, data: response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
+
+  async deleteRoom({ params }, res) {
+    const { id, rid } = params;
+    const opt = { new: true };
+    let updated = false;
+    try {
+      const response = await Movie.findByIdAndUpdate(
+        { _id: id },
+        { $pull: { rooms: rid } },
+        opt
+      ).exec();
+
+      if (!response) {
+        return res
+          .status(404)
+          .json({ status: updated, message: 'Movie not found' });
+      }
+      updated = true;
+      return res.status(200).json({ status: updated, data: response });
     } catch (error) {
       return res.status(500).json({ error: error.toString() });
     }

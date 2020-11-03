@@ -29,6 +29,9 @@ app
   .get(movies.getOne)
   .put(movies.updateOne)
   .delete(movies.deleteOne);
-app.route('/movies/:id/room/:rid').put(movies.addRoom);
+app
+  .route('/movies/:id/room/:rid')
+  .put(movies.addRoom)
+  .delete(movies.deleteRoom);
 
 module.exports = app;
