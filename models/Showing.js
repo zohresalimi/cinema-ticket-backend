@@ -5,18 +5,21 @@ const ShowingSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Movie',
     required: true,
-    unique: true,
   },
   room: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Room',
     required: true,
-    unique: true,
   },
-  cinema: String,
+  cinema: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Cinema',
+    required: true,
+  },
   startTime: String,
   endTime: String,
   capacity: Number,
+  price: Number,
   seats: Array,
 });
 

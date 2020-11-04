@@ -14,7 +14,6 @@ const MovieSchema = mongoose.Schema({
   originalLanguage: String,
   images: { default: [] },
   rooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room' }],
-  price: Number,
   premiere: Date,
 });
 

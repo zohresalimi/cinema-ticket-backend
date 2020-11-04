@@ -15,6 +15,24 @@ module.exports = {
     }
   },
 
+  async getByCinemaId(req, res) {
+    try {
+      if (!req.body.cinemaId) {
+        return res
+          .status(400)
+          .json({ message: 'Parameter `cinemaId` was not provided!' });
+      }
+
+      const response = await Showing.findOne({
+        cinema: req.body.cinemaId,
+      }).populate('room');
+
+      return res.status(200).json({ response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
+
   async createOne(req, res) {
     const { movie, room, startTime, endTime } = req.body;
     try {
@@ -23,16 +41,16 @@ module.exports = {
           .status(400)
           .json({ message: 'Movie and Room parameter were not provided!' });
       }
-      const roomCapacity = await Room.findById({ _id: room });
-      const cinema = await Cinema.findOne({ rooms: { $in: room } });
+      const roomObject = await Room.findById({ _id: room });
+      const cinemaObject = await Cinema.findOne({ rooms: { $in: room } });
       const newTimeSlot = {
         movie,
         room,
-        cinema: cinema.name,
+        cinema: cinemaObject._id,
         startTime,
         endTime,
-        capacity: roomCapacity.capacity,
-        seats: roomCapacity.seats,
+        capacity: roomObject.capacity,
+        seats: roomObject.seats,
       };
       const response = await Showing.create(newTimeSlot);
       return res.status(201).json({ data: response });

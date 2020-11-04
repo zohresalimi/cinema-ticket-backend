@@ -38,8 +38,9 @@ app
 
 // Showing endpoints
 app.route('/showings').get(showings.getAll).post(showings.createOne);
+app.route('/showings/byCinemaId/:cinemaId').get(showings.getByCinemaId);
 
 // Ticket endpoints
-app.route('/Ticket').get(showings.getAll).post(showings.createOne);
+app.route('/ticket').get(showings.getAll).post(showings.createOne);
 
 module.exports = app;
