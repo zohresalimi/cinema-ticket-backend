@@ -83,7 +83,7 @@ module.exports = {
       const response = await Movie.find({
         premiere: { $lte: currentDate },
       }).exec();
-
+      console.log(response);
       if (!response) {
         return res
           .status(404)
