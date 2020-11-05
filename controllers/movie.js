@@ -39,6 +39,63 @@ module.exports = {
     }
   },
 
+  async getByGenre({ body }, res) {
+    const { genre } = body;
+    let updated = false;
+    try {
+      const response = await Movie.find({ genre: { $in: genre } }).exec();
+      if (!response) {
+        return res
+          .status(404)
+          .json({ status: updated, message: 'Movie not found' });
+      }
+      updated = true;
+      return res.status(200).json({ status: updated, data: response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
+
+  async getByUpcoming(req, res) {
+    let updated = false;
+    try {
+      const currentDate = new Date().toJSON();
+      const response = await Movie.find({
+        premiere: { $gt: currentDate },
+      }).exec();
+
+      if (!response) {
+        return res
+          .status(404)
+          .json({ status: updated, message: 'Movie not found' });
+      }
+      updated = true;
+      return res.status(200).json({ status: updated, data: response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
+
+  async getCurrentPremiere(req, res) {
+    let updated = false;
+    try {
+      const currentDate = new Date().toJSON();
+      const response = await Movie.find({
+        premiere: { $lte: currentDate },
+      }).exec();
+
+      if (!response) {
+        return res
+          .status(404)
+          .json({ status: updated, message: 'Movie not found' });
+      }
+      updated = true;
+      return res.status(200).json({ status: updated, data: response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
+
   async updateOne({ params, body }, res) {
     const { id } = params;
     const opt = { new: true };
