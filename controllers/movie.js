@@ -14,6 +14,7 @@ module.exports = {
   },
 
   async createOne({ body }, res) {
+    console.log(body);
     try {
       if (!body.name) {
         return res
@@ -39,18 +40,20 @@ module.exports = {
     }
   },
 
-  async getByGenre({ body }, res) {
-    const { genre } = body;
-    let updated = false;
+  async getByGenre({ query }, res) {
+    const { genre } = query;
+
     try {
-      const response = await Movie.find({ genre: { $in: genre } }).exec();
+      const response = await Movie.find({
+        genre: { $in: genre },
+      }).exec();
       if (!response) {
         return res
           .status(404)
-          .json({ status: updated, message: 'Movie not found' });
+          .json({ status: false, message: 'Movie not found' });
       }
-      updated = true;
-      return res.status(200).json({ status: updated, data: response });
+
+      return res.status(200).json({ status: true, data: response });
     } catch (error) {
       return res.status(500).json({ error: error.toString() });
     }
@@ -83,7 +86,6 @@ module.exports = {
       const response = await Movie.find({
         premiere: { $lte: currentDate },
       }).exec();
-      console.log(response);
       if (!response) {
         return res
           .status(404)

@@ -39,10 +39,10 @@ module.exports = {
     }
   },
 
-  async getByListId({ body }, res) {
-    const { rooms: rids } = body;
+  async getByRoomIds({ query }, res) {
+    const { rooms } = query;
     try {
-      const response = await Cinema.find({ rooms: { $in: rids } })
+      const response = await Cinema.find({ rooms: { $in: JSON.parse(rooms) } })
         .populate('room')
         .exec();
       if (!response) {

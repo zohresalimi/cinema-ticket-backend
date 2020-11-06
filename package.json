@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development nodemon",
     "start": "cross-env NODE_ENV=production node src/index.js",
-    "lint": "eslint \"**/*.js\"" 
+    "lint": "eslint \"**/*.js\""
   },
   "keywords": [],
   "author": "",

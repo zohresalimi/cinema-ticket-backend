@@ -15,19 +15,20 @@ module.exports = {
     }
   },
 
-  async getByCinemaId(req, res) {
+  async getByMovieId({ params }, res) {
+    console.log(params);
+    const { movieId } = params;
     try {
-      if (!req.body.cinemaId) {
-        return res
-          .status(400)
-          .json({ message: 'Parameter `cinemaId` was not provided!' });
+      const response = await Showing.find({
+        movie: movieId,
+      })
+        .populate('room')
+        .populate('movie')
+        .exec();
+      if (!response) {
+        return res.status(404).json({ message: 'Room not found' });
       }
-
-      const response = await Showing.findOne({
-        cinema: req.body.cinemaId,
-      }).populate('room');
-
-      return res.status(200).json({ response });
+      return res.status(200).json({ data: response });
     } catch (error) {
       return res.status(500).json({ error: error.toString() });
     }
@@ -54,6 +55,24 @@ module.exports = {
       };
       const response = await Showing.create(newTimeSlot);
       return res.status(201).json({ data: response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
+
+  async updateOne({ params, body }, res) {
+    const { id } = params;
+    const opt = { new: true };
+    let updated = false;
+    try {
+      const response = await Showing.findOne(id, body, opt);
+      if (!response) {
+        return res
+          .status(404)
+          .json({ status: updated, message: 'Cinema not found' });
+      }
+      updated = true;
+      return res.status(200).json({ status: updated, data: response });
     } catch (error) {
       return res.status(500).json({ error: error.toString() });
     }

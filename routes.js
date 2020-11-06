@@ -8,7 +8,7 @@ const showings = require('./controllers/showing');
 
 // Cinema endpoints
 app.route('/cinemas').get(cinema.getAll).post(cinema.createOne);
-app.route('/cinemas/byIds').get(cinema.getByListId);
+app.route('/cinemas/by-room-ids').get(cinema.getByRoomIds);
 app
   .route('/cinemas/:id')
   .get(cinema.getOne)
@@ -41,7 +41,8 @@ app
 
 // Showing endpoints
 app.route('/showings').get(showings.getAll).post(showings.createOne);
-app.route('/showings/byCinemaId/:cinemaId').get(showings.getByCinemaId);
+app.route('/showings/by-movie-id/:movieId').get(showings.getByMovieId);
+app.route('/showings/:id').put(movies.updateOne);
 
 // Ticket endpoints
 app.route('/ticket').get(showings.getAll).post(showings.createOne);
