@@ -1,6 +1,21 @@
 const Cinema = require('../models/Cinema');
 const Room = require('../models/Room');
 const Showing = require('../models/Showing');
+const Movie = require('../models/Movie');
+
+const generateEndTime = (start, duration) => {
+  const time = start;
+  const durationTime = duration;
+  const splitTime = time.split(':');
+  const splitDuration = durationTime.split(':');
+
+  let hour = parseInt(splitTime[0], 10) + parseInt(splitDuration[0], 10);
+  let minute = parseInt(splitTime[1], 10) + parseInt(splitDuration[1], 10);
+  hour += Math.round(minute / 60);
+  minute %= 60;
+  const endTime = `${+hour}:${minute}`;
+  return endTime;
+};
 
 module.exports = {
   async getAll(req, res) {
@@ -16,7 +31,6 @@ module.exports = {
   },
 
   async getByMovieId({ params }, res) {
-    console.log(params);
     const { movieId } = params;
     try {
       const response = await Showing.find({
@@ -24,6 +38,7 @@ module.exports = {
       })
         .populate('room')
         .populate('movie')
+        .populate('cinema')
         .exec();
       if (!response) {
         return res.status(404).json({ message: 'Room not found' });
@@ -35,13 +50,15 @@ module.exports = {
   },
 
   async createOne(req, res) {
-    const { movie, room, startTime, endTime } = req.body;
+    const { movie, room, startTime } = req.body;
     try {
       if (!movie || !room) {
         return res
           .status(400)
           .json({ message: 'Movie and Room parameter were not provided!' });
       }
+      const movieObj = await Movie.findById({ _id: movie });
+      const endTImeMovie = generateEndTime(startTime, movieObj.duration);
       const roomObject = await Room.findById({ _id: room });
       const cinemaObject = await Cinema.findOne({ rooms: { $in: room } });
       const newTimeSlot = {
@@ -49,7 +66,7 @@ module.exports = {
         room,
         cinema: cinemaObject._id,
         startTime,
-        endTime,
+        endTime: endTImeMovie,
         capacity: roomObject.capacity,
         seats: roomObject.seats,
       };
