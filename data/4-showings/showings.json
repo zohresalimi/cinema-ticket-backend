@@ -1,59 +1,462 @@
 [
     {
         "movie":{ "$oid": "5fa717f00e365a5bd26a6e2d"},
-        "room": [{ "$oid": "5fa700379bae0e19e2463e8d"}],
-        "startTime":""
+        "room": { "$oid": "5fa65403be2034a6cc97c3b8"},
+        "cinema": { "$oid": "5fa653448dc073a0190b3211"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa717f00e365a5bd26a6e2d"},
-        "room": [{ "$oid": "5fa7002a7d8e0ebd4e8d866b"}],
-        "startTime":""
+        "room": { "$oid": "5fa7002a7d8e0ebd4e8d866b"},
+        "cinema": { "$oid": "5fa6533843322eeeaab68510"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa717fb36f364f249ef0995"},
-        "room": [{ "$oid": "5fa653e526cb46f8d494c5a2"}],
-        "startTime":""
+        "room": { "$oid": "5fa741b0cb2a200126f8d045"},
+        "cinema": { "$oid": "5fa6533843322eeeaab68510"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa717fb36f364f249ef0995"},
-        "room": [{ "$oid": "5fa653d0a7f1201999dd1ac0"}],
-        "startTime":"10:30",
-        "price": "500"
+        "room": { "$oid": "5fa653d0a7f1201999dd1ac0"},
+        "cinema": { "$oid": "5fa64fe234fbbf9945f3a3ce"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa7180f1a539cd8ddf06f7c"},
-        "room": [{ "$oid": "5fa65403be2034a6cc97c3b8"}],   
-        "startTime":"10:30",
-        "price": "500"
+        "room": { "$oid": "5fa65403be2034a6cc97c3b8"},   
+        "cinema": { "$oid": "5fa653448dc073a0190b3211"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa7180f1a539cd8ddf06f7c"},
-        "room": [{ "$oid": "5fa653dae5c30b268921a81f"}],
-        "startTime":"10:30",
-        "price": "500"
+        "room": { "$oid": "5fa653dae5c30b268921a81f"},
+        "cinema": { "$oid": "5fa6532f46c77460a0221b40"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa71823adc463397a50c504"},
-        "room": [{ "$oid": "5fa653f9e332453b9ad4d402"}],
-        "startTime":"10:30",
-        "price": "500"
+        "room": { "$oid": "5fa653f9e332453b9ad4d402"},
+        "cinema": { "$oid": "5fa6533843322eeeaab68510"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa71823adc463397a50c504"},
-        "room": [{ "$oid": "5fa741b0cb2a200126f8d045"}],
-        "startTime":"10:30",
-        "price": "500"
+        "room": { "$oid": "5fa653e526cb46f8d494c5a2"},
+        "cinema": { "$oid": "5fa6532f46c77460a0221b40"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa71834bb47cd0ea7e0bb32"},
-        "room": [{ "$oid": "5fa65412104c5eb7fc50c2b6"}],
-        "startTime":"10:30",
-        "price": "500"
+        "room": { "$oid": "5fa65412104c5eb7fc50c2b6"},
+        "cinema": { "$oid": "5fa653448dc073a0190b3211"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       },
     {
         "movie":{ "$oid": "5fa71834bb47cd0ea7e0bb32"},
-        "room": [{ "$oid": "5fa653c0643c06586bba7d78"}],
-        "startTime":"10:30",
-        "price": "500"
+        "room": { "$oid": "5fa653c0643c06586bba7d78"},
+        "cinema": { "$oid": "5fa64fe234fbbf9945f3a3ce"},
+        "startTime": "10:30",
+        "endTime": "",
+        "capacity": 25,
+        "price": "500",
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+]
       }
 ]

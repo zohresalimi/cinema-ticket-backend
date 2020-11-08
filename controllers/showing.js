@@ -36,9 +36,8 @@ module.exports = {
       const response = await Showing.find({
         movie: movieId,
       })
-        .populate('room')
         .populate('movie')
-        .populate('cinema')
+        .populate('room')
         .exec();
       if (!response) {
         return res.status(404).json({ message: 'Room not found' });

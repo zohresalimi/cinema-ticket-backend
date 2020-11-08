@@ -3,70 +3,430 @@
         "name":"room 1",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa64fe234fbbf9945f3a3ce"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa653c0643c06586bba7d78"}
     },
     {
         "name":"room 2",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa64fe234fbbf9945f3a3ce"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa653d0a7f1201999dd1ac0"}
     },
     {
         "name":"room 1",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa6532f46c77460a0221b40"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa653dae5c30b268921a81f"}
     },
     {
         "name":"room 2",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa6532f46c77460a0221b40"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa653e526cb46f8d494c5a2"}
     },
     {
         "name":"room 1",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa6533843322eeeaab68510"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa741b0cb2a200126f8d045"}
     },
     {
         "name":"room 2",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa6533843322eeeaab68510"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa653f9e332453b9ad4d402"}
     },
     {
         "name":"room 3",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa6533843322eeeaab68510"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa7002a7d8e0ebd4e8d866b"}
     },
     {
         "name":"room 1",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa653448dc073a0190b3211"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa65403be2034a6cc97c3b8"}
     },
     {
         "name":"room 2",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa653448dc073a0190b3211"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa65412104c5eb7fc50c2b6"}
     },
     {
         "name":"room 3",
         "capacity":"25", 
         "cinema":{ "$oid": "5fa653448dc073a0190b3211"},
-        "seats":[5,5],
+        "seats":[
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ],
+  [
+    { "seatNumber": 1,"taken": false },
+    { "seatNumber": 2,"taken": false },
+    { "seatNumber": 3,"taken": false },
+    { "seatNumber": 4,"taken": false },
+    { "seatNumber": 5,"taken": false }
+  ]
+],
         "_id":{ "$oid": "5fa700379bae0e19e2463e8d"}
     }
 
