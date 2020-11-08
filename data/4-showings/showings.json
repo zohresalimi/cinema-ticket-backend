@@ -1,0 +1,59 @@
+[
+    {
+        "movie":{ "$oid": "5fa717f00e365a5bd26a6e2d"},
+        "room": [{ "$oid": "5fa700379bae0e19e2463e8d"}],
+        "startTime":""
+      },
+    {
+        "movie":{ "$oid": "5fa717f00e365a5bd26a6e2d"},
+        "room": [{ "$oid": "5fa7002a7d8e0ebd4e8d866b"}],
+        "startTime":""
+      },
+    {
+        "movie":{ "$oid": "5fa717fb36f364f249ef0995"},
+        "room": [{ "$oid": "5fa653e526cb46f8d494c5a2"}],
+        "startTime":""
+      },
+    {
+        "movie":{ "$oid": "5fa717fb36f364f249ef0995"},
+        "room": [{ "$oid": "5fa653d0a7f1201999dd1ac0"}],
+        "startTime":"10:30",
+        "price": "500"
+      },
+    {
+        "movie":{ "$oid": "5fa7180f1a539cd8ddf06f7c"},
+        "room": [{ "$oid": "5fa65403be2034a6cc97c3b8"}],   
+        "startTime":"10:30",
+        "price": "500"
+      },
+    {
+        "movie":{ "$oid": "5fa7180f1a539cd8ddf06f7c"},
+        "room": [{ "$oid": "5fa653dae5c30b268921a81f"}],
+        "startTime":"10:30",
+        "price": "500"
+      },
+    {
+        "movie":{ "$oid": "5fa71823adc463397a50c504"},
+        "room": [{ "$oid": "5fa653f9e332453b9ad4d402"}],
+        "startTime":"10:30",
+        "price": "500"
+      },
+    {
+        "movie":{ "$oid": "5fa71823adc463397a50c504"},
+        "room": [{ "$oid": "5fa741b0cb2a200126f8d045"}],
+        "startTime":"10:30",
+        "price": "500"
+      },
+    {
+        "movie":{ "$oid": "5fa71834bb47cd0ea7e0bb32"},
+        "room": [{ "$oid": "5fa65412104c5eb7fc50c2b6"}],
+        "startTime":"10:30",
+        "price": "500"
+      },
+    {
+        "movie":{ "$oid": "5fa71834bb47cd0ea7e0bb32"},
+        "room": [{ "$oid": "5fa653c0643c06586bba7d78"}],
+        "startTime":"10:30",
+        "price": "500"
+      }
+]

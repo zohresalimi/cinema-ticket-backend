@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development nodemon",
     "start": "cross-env NODE_ENV=production node src/index.js",
-    "lint": "eslint \"**/*.js\""
+    "lint": "eslint \"**/*.js\"",
+    "seed": "node data/import.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongo-seeding": "^3.5.0",
     "mongoose": "^5.10.11",
     "nodemon": "^2.0.6"
   }

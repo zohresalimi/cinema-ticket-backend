@@ -50,7 +50,7 @@ module.exports = {
   },
 
   async createOne(req, res) {
-    const { movie, room, startTime } = req.body;
+    const { movie, room, startTime, price } = req.body;
     try {
       if (!movie || !room) {
         return res
@@ -58,7 +58,7 @@ module.exports = {
           .json({ message: 'Movie and Room parameter were not provided!' });
       }
       const movieObj = await Movie.findById({ _id: movie });
-      const endTImeMovie = generateEndTime(startTime, movieObj.duration);
+      const endTimeMovie = generateEndTime(startTime, movieObj.duration);
       const roomObject = await Room.findById({ _id: room });
       const cinemaObject = await Cinema.findOne({ rooms: { $in: room } });
       const newTimeSlot = {
@@ -66,8 +66,9 @@ module.exports = {
         room,
         cinema: cinemaObject._id,
         startTime,
-        endTime: endTImeMovie,
+        endTime: endTimeMovie,
         capacity: roomObject.capacity,
+        price,
         seats: roomObject.seats,
       };
       const response = await Showing.create(newTimeSlot);

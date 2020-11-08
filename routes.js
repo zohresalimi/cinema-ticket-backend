@@ -45,6 +45,6 @@ app.route('/showings/by-movie-id/:movieId').get(showings.getByMovieId);
 app.route('/showings/:id').put(movies.updateOne);
 
 // Ticket endpoints
-app.route('/ticket').get(showings.getAll).post(showings.createOne);
+// app.route('/ticket').get(showings.getAll).post(showings.createOne);
 
 module.exports = app;

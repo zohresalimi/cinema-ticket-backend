@@ -1,0 +1,30 @@
+[
+    {
+        "name":"filmstaden kista",
+        "purchaseStartTime":"8:00", 
+        "purchaseEndTime":"21:30",
+        "rooms":[{ "$oid": "5fa653c0643c06586bba7d78"},{ "$oid": "5fa653d0a7f1201999dd1ac0"}],
+        "_id":{ "$oid": "5fa64fe234fbbf9945f3a3ce"}
+    },
+    {
+        "name":"filmstaden scandinavia",
+        "purchaseStartTime":"8:00", 
+        "purchaseEndTime":"21:30",
+        "rooms":[{ "$oid": "5fa653dae5c30b268921a81f"},{ "$oid": "5fa653e526cb46f8d494c5a2"}],
+        "_id":{ "$oid": "5fa6532f46c77460a0221b40"}
+    },
+    {
+        "name":"film city serge",
+        "purchaseStartTime":"8:00", 
+        "purchaseEndTime":"21:30",
+        "rooms":[{ "$oid": "5fa741b0cb2a200126f8d045"},{ "$oid": "5fa653f9e332453b9ad4d402"},{ "$oid": "5fa7002a7d8e0ebd4e8d866b"}],
+        "_id":{ "$oid": "5fa6533843322eeeaab68510"}
+    },
+    {
+        "name":"victoria stockholm",
+        "purchaseStartTime":"8:00", 
+        "purchaseEndTime":"21:30",
+        "rooms":[{ "$oid": "5fa65403be2034a6cc97c3b8"},{ "$oid": "5fa65412104c5eb7fc50c2b6"},{ "$oid": "5fa700379bae0e19e2463e8d"}],
+        "_id":{ "$oid": "5fa653448dc073a0190b3211"}
+    }
+]
