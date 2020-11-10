@@ -5,6 +5,7 @@ const cinema = require('./controllers/cinema');
 const room = require('./controllers/room');
 const movies = require('./controllers/movie');
 const showings = require('./controllers/showing');
+const checkout = require('./controllers/checkout');
 
 // Cinema endpoints
 app.route('/cinemas').get(cinema.getAll).post(cinema.createOne);
@@ -47,4 +48,5 @@ app.route('/showings/:id').put(movies.updateOne);
 // Ticket endpoints
 // app.route('/ticket').get(showings.getAll).post(showings.createOne);
 
+app.route('/create-checkout-session').post(checkout.createOne);
 module.exports = app;
