@@ -14,6 +14,7 @@ const envFiles = {
 require('dotenv').config({ path: envFiles[process.env.NODE_ENV] });
 
 const connect = async () => {
+  // eslint-disable-next-line no-console
   console.log(`${process.env.MONGO_URI} ${dbNames[process.env.NODE_ENV]}`);
   const mongoConnectionString = `${process.env.MONGO_URI}${
     dbNames[process.env.NODE_ENV]

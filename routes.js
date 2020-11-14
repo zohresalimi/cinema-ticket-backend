@@ -53,5 +53,6 @@ app.route('/users').get(users.getAll).post(users.createOne);
 // Ticket endpoints
 app.route('/ticket').get(tickets.getAll).post(tickets.createOne);
 
-app.route('/create-checkout-session').post(checkout.createOne);
+app.route('/checkout/create').post(checkout.createOne);
+app.route('/checkout/success/:sessionId').get(checkout.handleSuccessfulPayment);
 module.exports = app;

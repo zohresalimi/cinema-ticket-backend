@@ -2,7 +2,6 @@ const Movie = require('../models/Movie');
 
 module.exports = {
   async getAll(req, res) {
-    console.log(req);
     try {
       const response = await Movie.find({});
       if (!response.length) {

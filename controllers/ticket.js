@@ -32,7 +32,6 @@ module.exports = {
   },
 
   async createOne(req, res) {
-    console.log(req.body);
     const {
       quantity,
       seatNumbers,

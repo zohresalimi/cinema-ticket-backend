@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 process.env.DEBUG = 'mongo-seeding';
 const { Seeder } = require('mongo-seeding');
 const path = require('path');

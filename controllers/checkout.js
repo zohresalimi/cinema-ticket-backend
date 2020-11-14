@@ -1,13 +1,12 @@
-const Tickets = require('../models/Tickets');
-
 const stripe = require('stripe')(
   'sk_test_51HlWoOBo1w65UuRVuebqp0BmyhNUgmUhkYXL9OhRIYKLR6UYckuYhMuOLOeFAHTKjrNnrelgMVN9kPvPhikK3Vgy00FOlVynWK'
 );
+const Showing = require('../models/Showing');
+const Tickets = require('../models/Tickets');
 
 module.exports = {
   async createOne({ body }, res) {
     const { ticketId } = body;
-    console.log(ticketId);
     try {
       const ticket = await Tickets.findById(ticketId);
       if (!ticket) {
@@ -32,11 +31,13 @@ module.exports = {
           },
         ],
         mode: 'payment',
-        success_url: 'https://example.com/success/',
-        cancel_url: 'https://example.com/cancel',
+        success_url:
+          'http://localhost:8080/api/v1/checkout/success/{CHECKOUT_SESSION_ID}',
+        cancel_url: 'http://localhost:3000/order/cancel',
       });
-      console.log(session);
 
+      ticket.sessionId = session.id;
+      ticket.save();
       return res.status(200).json({ id: session.id });
     } catch (e) {
       return res
@@ -45,5 +46,34 @@ module.exports = {
     }
   },
 
-  async handleSuccessfulPayment() {},
+  async handleSuccessfulPayment({ params }, res) {
+    const { sessionId } = params;
+    try {
+      const ticket = await Tickets.findOne({ sessionId })
+        .populate('showing')
+        .exec();
+      ticket.status = true;
+
+      ticket.seatNumbers.forEach(([row, cols]) => {
+        cols.forEach((col) => {
+          ticket.showing.seats[row][col].taken = true;
+        });
+      });
+
+      await Showing.findByIdAndUpdate(ticket.showing._id, {
+        $set: {
+          seats: ticket.showing.seats,
+        },
+        capacity: ticket.showing.capacity - ticket.quantity,
+      });
+
+      ticket.save();
+      return res.redirect('http://localhost:3000/order/success');
+    } catch (error) {
+      return res.status(500).json({
+        message: 'Problem with updating ticket by session',
+        error: error.stack,
+      });
+    }
+  },
 };

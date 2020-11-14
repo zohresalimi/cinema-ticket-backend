@@ -6,6 +6,7 @@ const TicketSchema = mongoose.Schema(
     quantity: Number,
     price: Number,
     unitAmount: Number,
+    sessionId: String,
     seatNumbers: [],
     user: {
       type: mongoose.Schema.Types.ObjectId,
