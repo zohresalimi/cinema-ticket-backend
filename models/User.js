@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
-const { TicketSchema } = require('./Tickets');
 
 const UserSchema = new mongoose.Schema({
-  name: String,
+  name: { type: String, default: '' },
   email: { type: String, required: true, unique: true },
-  phoneNumber: String,
-  tickets: [TicketSchema],
+  phoneNumber: { type: String, default: '' },
+  tickets: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Ticket',
+    },
+  ],
 });
 
 module.exports = mongoose.model('User', UserSchema);

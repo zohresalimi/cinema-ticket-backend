@@ -16,7 +16,7 @@ const ShowingSchema = mongoose.Schema({
     ref: 'Cinema',
     required: true,
   },
-  startTime: String,
+  startTime: Date,
   endTime: String,
   capacity: Number,
   price: Number,

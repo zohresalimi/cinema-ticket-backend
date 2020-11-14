@@ -1,5 +1,5 @@
 const Ticket = require('../models/Tickets');
-const Showing = require('../models/Showing');
+const User = require('../models/User');
 
 module.exports = {
   async getAll(req, res) {
@@ -32,27 +32,44 @@ module.exports = {
   },
 
   async createOne(req, res) {
+    console.log(req.body);
     const {
       quantity,
       seatNumbers,
-      userId,
+      price,
+      unitAmount,
+      email,
       movieName,
       roomName,
       cinemaName,
-      showingId,
+      showing,
+      movieCover,
     } = req.body;
+
     try {
-      const showing = await Showing.findById({ _id: showingId });
-      const response = await Ticket.create({
+      const ticket = new Ticket({
         quantity,
-        price: showing.price,
+        price,
+        unitAmount,
         seatNumbers,
-        user: userId,
+        showing,
         movieName,
         cinemaName,
         roomName,
+        movieCover,
       });
-      return res.status(201).json({ data: response });
+      const userObj = await User.findOneAndUpdate(
+        { email },
+        { $addToSet: { tickets: ticket._id } },
+        { upsert: true, new: true }
+      );
+
+      ticket.userId = userObj._id;
+
+      ticket.save();
+      return res
+        .status(201)
+        .json({ data: ticket, message: 'Ticket is created' });
     } catch (error) {
       return res.status(500).json({ error: error.toString() });
     }

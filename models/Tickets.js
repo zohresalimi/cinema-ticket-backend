@@ -5,6 +5,7 @@ const TicketSchema = mongoose.Schema(
     status: { type: Boolean, default: false },
     quantity: Number,
     price: Number,
+    unitAmount: Number,
     seatNumbers: [],
     user: {
       type: mongoose.Schema.Types.ObjectId,
@@ -18,9 +19,10 @@ const TicketSchema = mongoose.Schema(
     cinemaName: String,
     roomName: String,
     movieName: String,
+    movieCover: String,
   },
   {
-    timestamps: { currentTime: () => Math.floor(Date.now() / 1000) },
+    timestamps: true,
   }
 );
 

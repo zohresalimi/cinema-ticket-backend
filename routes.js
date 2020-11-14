@@ -1,29 +1,31 @@
 const express = require('express');
 
 const app = express.Router();
-const cinema = require('./controllers/cinema');
-const room = require('./controllers/room');
+const cinemas = require('./controllers/cinema');
+const rooms = require('./controllers/room');
 const movies = require('./controllers/movie');
 const showings = require('./controllers/showing');
+const users = require('./controllers/user');
+const tickets = require('./controllers/ticket');
 const checkout = require('./controllers/checkout');
 
 // Cinema endpoints
-app.route('/cinemas').get(cinema.getAll).post(cinema.createOne);
-app.route('/cinemas/by-room-ids').get(cinema.getByRoomIds);
+app.route('/cinemas').get(cinemas.getAll).post(cinemas.createOne);
+app.route('/cinemas/by-room-ids').get(cinemas.getByRoomIds);
 app
   .route('/cinemas/:id')
-  .get(cinema.getOne)
-  .put(cinema.updateOne)
-  .delete(cinema.deleteOne);
+  .get(cinemas.getOne)
+  .put(cinemas.updateOne)
+  .delete(cinemas.deleteOne);
 
 // Room endpoints
-app.route('/rooms').get(room.getAll).post(room.createOne);
-app.route('/rooms/byIds').get(room.getByListId);
+app.route('/rooms').get(rooms.getAll).post(rooms.createOne);
+app.route('/rooms/byIds').get(rooms.getByListId);
 app
   .route('/rooms/:id')
-  .get(room.getOne)
-  .put(room.updateOne)
-  .delete(room.deleteOne);
+  .get(rooms.getOne)
+  .put(rooms.updateOne)
+  .delete(rooms.deleteOne);
 
 // Movies endpoints
 app.route('/movies').get(movies.getAll).post(movies.createOne);
@@ -46,7 +48,10 @@ app.route('/showings/by-movie-id/:movieId').get(showings.getByMovieId);
 app.route('/showings/:id').put(movies.updateOne);
 
 // Ticket endpoints
-// app.route('/ticket').get(showings.getAll).post(showings.createOne);
+app.route('/users').get(users.getAll).post(users.createOne);
+
+// Ticket endpoints
+app.route('/ticket').get(tickets.getAll).post(tickets.createOne);
 
 app.route('/create-checkout-session').post(checkout.createOne);
 module.exports = app;
