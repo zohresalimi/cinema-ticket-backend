@@ -5,39 +5,39 @@
         "cinema":{ "$oid": "5fa64fe234fbbf9945f3a3ce"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa653c0643c06586bba7d78"}
@@ -48,39 +48,39 @@
         "cinema":{ "$oid": "5fa64fe234fbbf9945f3a3ce"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa653d0a7f1201999dd1ac0"}
@@ -91,39 +91,39 @@
         "cinema":{ "$oid": "5fa6532f46c77460a0221b40"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa653dae5c30b268921a81f"}
@@ -134,39 +134,39 @@
         "cinema":{ "$oid": "5fa6532f46c77460a0221b40"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa653e526cb46f8d494c5a2"}
@@ -177,39 +177,39 @@
         "cinema":{ "$oid": "5fa6533843322eeeaab68510"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa741b0cb2a200126f8d045"}
@@ -220,39 +220,39 @@
         "cinema":{ "$oid": "5fa6533843322eeeaab68510"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa653f9e332453b9ad4d402"}
@@ -263,39 +263,39 @@
         "cinema":{ "$oid": "5fa6533843322eeeaab68510"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa7002a7d8e0ebd4e8d866b"}
@@ -306,39 +306,39 @@
         "cinema":{ "$oid": "5fa653448dc073a0190b3211"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa65403be2034a6cc97c3b8"}
@@ -349,39 +349,39 @@
         "cinema":{ "$oid": "5fa653448dc073a0190b3211"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa65412104c5eb7fc50c2b6"}
@@ -392,39 +392,39 @@
         "cinema":{ "$oid": "5fa653448dc073a0190b3211"},
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ],
         "_id":{ "$oid": "5fa700379bae0e19e2463e8d"}

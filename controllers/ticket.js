@@ -63,7 +63,7 @@ module.exports = {
         { upsert: true, new: true }
       );
 
-      ticket.userId = userObj._id;
+      ticket.user = userObj._id;
 
       ticket.save();
       return res

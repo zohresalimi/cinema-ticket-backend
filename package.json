@@ -22,9 +22,11 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "cors": "^2.8.5",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
+    "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "mongo-seeding": "^3.5.0",
     "mongoose": "^5.10.11",

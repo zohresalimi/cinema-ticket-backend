@@ -8,7 +8,7 @@ const showings = require('./controllers/showing');
 const users = require('./controllers/user');
 const tickets = require('./controllers/ticket');
 const checkout = require('./controllers/checkout');
-
+const emailController = require('./controllers/email');
 // Cinema endpoints
 app.route('/cinemas').get(cinemas.getAll).post(cinemas.createOne);
 app.route('/cinemas/by-room-ids').get(cinemas.getByRoomIds);
@@ -55,4 +55,6 @@ app.route('/ticket').get(tickets.getAll).post(tickets.createOne);
 
 app.route('/checkout/create').post(checkout.createOne);
 app.route('/checkout/success/:sessionId').get(checkout.handleSuccessfulPayment);
+app.route('/checkout/cancel/:sessionId').get(checkout.handleCancelPayment);
+
 module.exports = app;

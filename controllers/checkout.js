@@ -3,17 +3,32 @@ const stripe = require('stripe')(
 );
 const Showing = require('../models/Showing');
 const Tickets = require('../models/Tickets');
+const emailService = require('./email');
 
 module.exports = {
   async createOne({ body }, res) {
     const { ticketId } = body;
     try {
-      const ticket = await Tickets.findById(ticketId);
+      const ticket = await Tickets.findById(ticketId)
+        .populate('showing')
+        .exec();
       if (!ticket) {
         return res
           .status(404)
           .json({ message: 'Ticket id provided was not found' });
       }
+      ticket.seatNumbers.forEach(([row, cols]) => {
+        cols.forEach((col) => {
+          ticket.showing.seats[row][col].taken = 'reserved';
+        });
+      });
+
+      await Showing.findByIdAndUpdate(ticket.showing._id, {
+        $set: {
+          seats: ticket.showing.seats,
+        },
+        capacity: ticket.showing.capacity - ticket.quantity,
+      });
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
@@ -25,7 +40,7 @@ module.exports = {
                 name: ticket.movieName,
                 images: [ticket.movieCover],
               },
-              unit_amount: ticket.unitAmount,
+              unit_amount: ticket.unitAmount * 100,
             },
             quantity: ticket.quantity,
           },
@@ -33,7 +48,8 @@ module.exports = {
         mode: 'payment',
         success_url:
           'http://localhost:8080/api/v1/checkout/success/{CHECKOUT_SESSION_ID}',
-        cancel_url: 'http://localhost:3000/order/cancel',
+        cancel_url:
+          'http://localhost:8080/api/v1/checkout/cancel/{CHECKOUT_SESSION_ID}',
       });
 
       ticket.sessionId = session.id;
@@ -46,17 +62,48 @@ module.exports = {
     }
   },
 
+  async handleCancelPayment({ params }, res) {
+    const { sessionId } = params;
+
+    try {
+      const ticket = await Tickets.findOne({ sessionId })
+        .populate('showing')
+        .exec();
+
+      ticket.seatNumbers.forEach(([row, cols]) => {
+        cols.forEach((col) => {
+          ticket.showing.seats[row][col].taken = 'available';
+        });
+      });
+
+      await Showing.findByIdAndUpdate(ticket.showing._id, {
+        $set: {
+          seats: ticket.showing.seats,
+        },
+        capacity: ticket.showing.capacity + ticket.quantity,
+      });
+
+      return res.redirect('http://localhost:3000/order/cancel');
+    } catch (error) {
+      return res.status(500).json({
+        message: 'Problem with rolling back the ticket',
+        error: error.stack,
+      });
+    }
+  },
+
   async handleSuccessfulPayment({ params }, res) {
     const { sessionId } = params;
     try {
       const ticket = await Tickets.findOne({ sessionId })
         .populate('showing')
+        .populate('user')
         .exec();
       ticket.status = true;
 
       ticket.seatNumbers.forEach(([row, cols]) => {
         cols.forEach((col) => {
-          ticket.showing.seats[row][col].taken = true;
+          ticket.showing.seats[row][col].taken = 'taken';
         });
       });
 
@@ -67,7 +114,9 @@ module.exports = {
         capacity: ticket.showing.capacity - ticket.quantity,
       });
 
-      ticket.save();
+      await ticket.save();
+      await emailService.sendTicketToGuestUser(ticket);
+
       return res.redirect('http://localhost:3000/order/success');
     } catch (error) {
       return res.status(500).json({

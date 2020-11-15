@@ -6,42 +6,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -52,42 +52,42 @@
         "startTime": "2020-11-14T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -98,42 +98,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -144,42 +144,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -190,42 +190,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -236,42 +236,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -282,42 +282,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -328,42 +328,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -374,42 +374,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       },
@@ -420,42 +420,42 @@
         "startTime": "2020-11-13T16:00:00Z",
         "endTime": "",
         "capacity": 25,
-        "price": "500",
+        "price": "100",
         "seats":[
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ],
   [
-    { "seatNumber": 1,"taken": false },
-    { "seatNumber": 2,"taken": false },
-    { "seatNumber": 3,"taken": false },
-    { "seatNumber": 4,"taken": false },
-    { "seatNumber": 5,"taken": false }
+    { "seatNumber": 1,"taken": "available" },
+    { "seatNumber": 2,"taken": "available" },
+    { "seatNumber": 3,"taken": "available" },
+    { "seatNumber": 4,"taken": "available" },
+    { "seatNumber": 5,"taken": "available" }
   ]
 ]
       }
