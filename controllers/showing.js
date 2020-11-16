@@ -76,7 +76,7 @@ module.exports = {
       return res.status(500).json({ error: error.toString() });
     }
   },
-
+  // TODO: update showing by movie Id not whole obj
   async updateOne({ params, body }, res) {
     const { id } = params;
     const opt = { new: true };

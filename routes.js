@@ -8,7 +8,7 @@ const showings = require('./controllers/showing');
 const users = require('./controllers/user');
 const tickets = require('./controllers/ticket');
 const checkout = require('./controllers/checkout');
-const emailController = require('./controllers/email');
+
 // Cinema endpoints
 app.route('/cinemas').get(cinemas.getAll).post(cinemas.createOne);
 app.route('/cinemas/by-room-ids').get(cinemas.getByRoomIds);

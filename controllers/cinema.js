@@ -42,7 +42,7 @@ module.exports = {
   async getByRoomIds({ query }, res) {
     const { rooms } = query;
     try {
-      const response = await Cinema.find({ rooms: { $in: JSON.parse(rooms) } })
+      const response = await Cinema.find({ rooms: { $in: rooms.split(',') } })
         .populate('room')
         .exec();
       if (!response) {
