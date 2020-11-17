@@ -4,16 +4,18 @@ const Showing = require('../models/Showing');
 const Movie = require('../models/Movie');
 
 const generateEndTime = (start, duration) => {
-  const time = start;
-  const durationTime = duration;
-  const splitTime = time.split(':');
-  const splitDuration = durationTime.split(':');
+  const startTime = new Date(start).getTime();
+  const [h, m] = duration.split(':');
+  const durationMillis = (+h * 60 + +m) * 60 * 1000;
+  const endTime = new Date(startTime + durationMillis).toISOString();
 
-  let hour = parseInt(splitTime[0], 10) + parseInt(splitDuration[0], 10);
-  let minute = parseInt(splitTime[1], 10) + parseInt(splitDuration[1], 10);
-  hour += Math.round(minute / 60);
-  minute %= 60;
-  const endTime = `${+hour}:${minute}`;
+  console.log(endTime);
+
+  // let hour = parseInt(splitTime[0], 10) + parseInt(splitDuration[0], 10);
+  // let minute = parseInt(splitTime[1], 10) + parseInt(splitDuration[1], 10);
+  // hour += Math.round(minute / 60);
+  // minute %= 60;
+  // const endTime = `${+hour}:${minute}`;
   return endTime;
 };
 
