@@ -4,8 +4,6 @@ const { expect } = require('chai');
 const app = require('../app');
 const { connect } = require('../config/database');
 const Cinema = require('../models/Cinema');
-const { clearConfigCache } = require('prettier');
-const Room = require('../models/Room');
 
 const request = supertest(app);
 
@@ -13,8 +11,9 @@ describe('Testing Cinema Route', () => {
   before(() => {
     connect();
   });
+
   after(async () => {
-    await Cinema.deleteMany();
+    mongoose.connection.db.dropCollection('cinemas');
     mongoose.connection.close();
   });
 
@@ -27,9 +26,9 @@ describe('Testing Cinema Route', () => {
     const res = await request.post('/api/v1/cinemas').send(data).expect(201);
     expect(res.body.data._id).to.be.ok;
     expect(res.body.data.name).to.equal(data.name);
-    const cinema = await Cinema.findById(res._id).toString();
+    const cinema = await Cinema.findById(res.body.data._id);
     expect(cinema).to.be.ok;
-    expect(cinema.name).to.equal(cinema.name);
+    expect(cinema.name).to.equal(data.name);
   });
 
   it('should return all cinemas', async () => {
@@ -44,7 +43,7 @@ describe('Testing Cinema Route', () => {
     expect(res.body.response[0].name).to.equal(newCinema.name);
   });
 
-  it('should return one cinemas by Id', async () => {
+  it('should return one cinema by Id', async () => {
     const expectedCinema = new Cinema({
       name: 'filmstadene',
       purchaseStartTime: '8:00',
@@ -57,7 +56,7 @@ describe('Testing Cinema Route', () => {
     expect(data._id).to.equal(id);
   });
 
-  it('should return one cinemas by Room Id', async () => {
+  it('should return one cinema by Room Ids', async () => {
     const expectedCinema = new Cinema({
       name: 'filmstadene',
       purchaseStartTime: '8:00',
@@ -92,10 +91,11 @@ describe('Testing Cinema Route', () => {
       purchaseEndTime: '21:30',
     };
 
-    await request.put(`/api/v1/cinemas/${cinema._id}`).send(updatedInfo);
-
+    const response = await request
+      .put(`/api/v1/cinemas/${cinema._id}`)
+      .send(updatedInfo);
+    expect(response.body).to.include({ status: true });
     const foundUpdatedCinema = await Cinema.findOne({ _id: cinema._id });
-
     expect(foundUpdatedCinema.name).to.equal(updatedInfo.name);
   });
 
@@ -110,7 +110,6 @@ describe('Testing Cinema Route', () => {
     const response = await request
       .delete(`/api/v1/cinemas/${cinema._id}`)
       .expect(200);
-    console.log(response.body);
     expect(response.body).to.include({ status: true });
     const deletedCinema = await Cinema.findOne({ _id: cinema._id });
     expect(deletedCinema).to.be.null;

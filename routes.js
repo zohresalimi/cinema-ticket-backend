@@ -20,7 +20,6 @@ app
 
 // Room endpoints
 app.route('/rooms').get(rooms.getAll).post(rooms.createOne);
-app.route('/rooms/byIds').get(rooms.getByListId);
 app
   .route('/rooms/:id')
   .get(rooms.getOne)

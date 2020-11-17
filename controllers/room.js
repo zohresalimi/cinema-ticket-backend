@@ -64,22 +64,6 @@ module.exports = {
     }
   },
 
-  async getByListId({ body }, res) {
-    const { rooms } = body;
-    try {
-      const response = await Room.find({ _id: { $in: rooms } })
-        .populate('cinema')
-        .exec();
-
-      if (!response) {
-        return res.status(404).json({ message: 'Room not found' });
-      }
-      return res.status(200).json({ data: response });
-    } catch (error) {
-      return res.status(500).json({ error: error.toString() });
-    }
-  },
-
   async updateOne({ params, body }, res) {
     const { id } = params;
     const { name, capacity, cinema, seats } = body;
