@@ -13,9 +13,11 @@ describe('Testing Room Route', () => {
     connect();
   });
 
+  afterEach(() => {
+    mongoose.connection.db.dropCollection('movies');
+  });
+
   after(async () => {
-    mongoose.connection.db.dropCollection('rooms');
-    mongoose.connection.db.dropCollection('cinemas');
     mongoose.connection.close();
   });
 

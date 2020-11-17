@@ -4,123 +4,207 @@ const { expect } = require('chai');
 const app = require('../app');
 const { connect } = require('../config/database');
 const Movie = require('../models/Movie');
+const Room = require('../models/Room');
 
 const request = supertest(app);
 
-describe('Testing Room Route', () => {
+describe('Testing movie Route', () => {
   before(() => {
     connect();
   });
 
-  after(async () => {
+  afterEach(() => {
     mongoose.connection.db.dropCollection('movies');
+  });
+
+  after(async () => {
     mongoose.connection.close();
   });
 
-  it('create a room by POST method', async () => {
-    const cinema = new Cinema({
-      name: 'filmstaden old',
-      purchaseStartTime: '8:00',
-      purchaseEndTime: '21:30',
-    });
-    await cinema.save();
-
+  it('create a movie by POST method', async () => {
     const data = {
-      name: 'filmstaden',
-      capacity: 4,
-      cinema: cinema._id,
-      seats: [2, 2],
+      name: 'follow me',
+      description:
+        'A popular influencer and his friends travel the world and film themselves in extreme situations. In Russia, they are invited to a mysterious escape room by an eccentric millionaire and see a given video success on social media in front of them. But no likes in the world can buy them free from the nightmare that awaits',
+      trailerUrl: 'https://youtu.be/tiBE56vQ0Fg',
+      genre: ['horror', 'thriller'],
+      duration: '1:28',
+      age: '15',
+      coverImage:
+        'https://catalog.cinema-api.com/cf/images/ncg-images/ead503a39bb9493aa8c772d821a50bb3.jpg?width=240&version=00D33922702B66203E0E9C8F6B7428B3&format=webp',
+      largeImage:
+        'https://catalog.cinema-api.com/cf/images/ncg-images/f06ecf0f968c48bc9ea0e96915caef98.jpg?width=1920&version=51F9983982797F8FBF65250BC4E9A775&format=webp',
+      director: 'will wernick',
+      premiere: '2020-10-05T15:18:52.722Z',
+      actors: ['Holland Roden', 'Ronen Rubinstein', 'Keegan Allen'],
+      originalTitle: 'English',
+      rooms: ['5fa700379bae0e19e2463e8d', '5fa7002a7d8e0ebd4e8d866b'],
     };
-    const response = await request.post('/api/v1/rooms').send(data).expect(201);
+    const response = await request
+      .post('/api/v1/movies')
+      .send(data)
+      .expect(201);
     expect(response.body.data._id).to.be.ok;
     expect(response.body.data.name).to.equal(data.name);
     expect(response.body.data).to.have.a.property('name');
-
-    const room = await Room.findById(response.body.data._id);
-    const updatedCinema = await Cinema.findById(cinema._id);
-
-    expect(room).to.be.ok;
-    expect(updatedCinema.rooms).to.include(response.body.data._id);
-    expect(room.name).to.equal(data.name);
   });
 
-  //   it('should return all rooms', async () => {
-  //     const room = new Room({
-  //       name: 'filmstaden',
-  //       capacity: 4,
-  //       cinema: '5fa653c0643c06586bba7d78',
-  //       seats: [2, 2],
-  //     });
-  //     await room.save();
-  //     const res = await request.get('/api/v1/rooms').expect(200);
-  //     expect(res.body.response[0]).to.be.an('object');
-  //     expect(res.body.response[0].name).to.equal(room.name);
-  //   });
+  it('should return all Movies', async () => {
+    const movie = new Movie({
+      name: 'movie 1',
+      genre: ['horror', 'thriller'],
+      duration: '1:28',
+      age: '15',
+      director: 'will wernick',
+      premiere: '2020-10-05T15:18:52.722Z',
+      rooms: ['5fa700379bae0e19e2463e8d', '5fa7002a7d8e0ebd4e8d866b'],
+    });
+    await movie.save();
+    const res = await request.get('/api/v1/movies').expect(200);
+    expect(res.body.response[0]).to.be.an('object');
+    expect(res.body.response[0].name).to.equal(movie.name);
+  });
 
-  //   it('should return one room by Id', async () => {
-  //     const room = new Room({
-  //       name: 'room 3',
-  //       capacity: 4,
-  //       cinema: '5fa653c0643c06586bba7d45',
-  //       seats: [2, 2],
-  //     });
-  //     await room.save();
-  //     const id = room._id.toString();
-  //     const response = await request.get(`/api/v1/rooms/${id}`).expect(200);
-  //     const { data } = response.body;
-  //     expect(data._id).to.equal(id);
-  //   });
+  it('should return one movie by Id', async () => {
+    const movie = new Movie({
+      name: 'movie 2',
+      genre: ['horror', 'thriller'],
+      duration: '1:28',
+      age: '15',
+      director: 'will wernick',
+      premiere: '2020-10-05T15:18:52.722Z',
+      rooms: ['5fa700379bae0e19e2463e8d', '5fa7002a7d8e0ebd4e8d866b'],
+    });
+    await movie.save();
+    const id = movie._id.toString();
+    const response = await request.get(`/api/v1/movies/${id}`).expect(200);
+    const { data } = response.body;
+    expect(data._id).to.equal(id);
+  });
 
-  //   it('should update a room', async () => {
-  //     const room = new Room({
-  //       name: 'room 4',
-  //       capacity: 4,
-  //       cinema: '5fa653c0643c06586bba7d45',
-  //       seats: [2, 2],
-  //     });
-  //     await room.save();
+  it('should return movies by genre', async () => {
+    const movie = new Movie({
+      name: 'movie 3',
+      genre: ['family', 'children'],
+    });
 
-  //     const updatedInfo = {
-  //       name: 'room 3',
-  //       capacity: 4,
-  //       cinema: '5fa653c0643c06586bba7d45',
-  //       seats: [2, 2],
-  //     };
+    await movie.save();
+    const genre = ['family', 'children'];
+    const response = await request
+      .get('/api/v1/movies/by-genre')
+      .query({
+        genre: genre,
+      })
+      .expect(200);
+    expect(response.body.data[0].genre).to.include.members(genre);
+  });
 
-  //     await request.put(`/api/v1/rooms/${room._id}`).send(updatedInfo);
+  it('should return empty if there is no upcoming movie', async () => {
+    const currentMovie = new Movie({
+      name: 'movie 4',
+      genre: ['family', 'children'],
+      premiere: '2020-01-05T15:18:52.722Z',
+    });
+    await currentMovie.save();
 
-  //     const foundUpdatedRoom = await Room.findOne({ _id: room._id });
+    const response = await request.get('/api/v1/movies/upcoming').expect(200);
+    expect(response.body).to.have.not.property('data');
+  });
 
-  //     expect(foundUpdatedRoom.name).to.equal(updatedInfo.name);
-  //   });
+  it('should return upcoming movies', async () => {
+    const upcomingMovie = new Movie({
+      name: 'movie 5',
+      genre: ['family', 'children'],
+      premiere: '2021-01-05T15:18:52.722Z',
+    });
+    await upcomingMovie.save();
 
-  //   it('should delete a room', async () => {
-  //     const cinema = new Cinema({
-  //       name: 'filmstaden old',
-  //       purchaseStartTime: '8:00',
-  //       purchaseEndTime: '21:30',
-  //     });
-  //     await cinema.save();
+    const upcomingResponse = await request
+      .get('/api/v1/movies/upcoming')
+      .expect(200);
+    expect(upcomingResponse.body).to.have.property('data');
+    expect(upcomingResponse.body.data).to.have.lengthOf(1);
+  });
 
-  //     const room = new Room({
-  //       name: 'room 3',
-  //       capacity: 4,
-  //       cinema: cinema._id,
-  //       seats: [2, 2],
-  //     });
-  //     await room.save();
+  it('should return current movies', async () => {
+    const currentMovie = new Movie({
+      name: 'movie 5',
+      genre: ['family', 'children'],
+      premiere: '2020-01-05T15:18:52.722Z',
+    });
+    await currentMovie.save();
 
-  //     const response = await request
-  //       .delete(`/api/v1/rooms/${room._id}`)
-  //       .expect(200);
-  //     expect(response.body).to.include({ status: true });
+    const response = await request
+      .get('/api/v1/movies/current-movie')
+      .expect(200);
+    expect(response.body).to.have.property('data');
+    expect(response.body.data).to.have.lengthOf(1);
+  });
 
-  //     const deletedRoom = await Cinema.findOne({ _id: room._id });
-  //     expect(deletedRoom).to.be.null;
+  it('should update a movie', async () => {
+    const movie = new Movie({
+      name: 'movie 5',
+      description:
+        'A popular influencer and his friends travel the world and film themselves in extreme situations. In Russia, they are invited to a mysterious escape room by an eccentric millionaire and see a given video success on social media in front of them. But no likes in the world can buy them free from the nightmare that awaits',
+      trailerUrl: 'https://youtu.be/tiBE56vQ0Fg',
+      genre: ['horror', 'thriller'],
+      duration: '1:28',
+      age: '15',
+    });
+    await movie.save();
 
-  //     const removedFromCinema = await Cinema.findById(cinema._id);
-  //     expect(removedFromCinema.rooms)
-  //       .to.be.an('array')
-  //       .that.does.not.include(room._id);
-  //   });
+    const updatedInfo = {
+      name: 'follow me',
+      age: '10',
+    };
+
+    await request
+      .put(`/api/v1/movies/${movie._id}`)
+      .send(updatedInfo)
+      .expect(200);
+    const foundUpdatedMovie = await Movie.findOne({ _id: movie._id });
+    expect(foundUpdatedMovie.name).to.equal(updatedInfo.name);
+  });
+
+  it('should add a room to a movie', async () => {
+    const movie = new Movie({
+      name: 'movie 5',
+      genre: ['horror', 'thriller'],
+      duration: '1:28',
+      age: '15',
+    });
+    await movie.save();
+
+    const room = new Room({
+      name: 'filmstaden',
+      capacity: 4,
+      cinema: '5fa653c0643c06586bba7d78',
+      seats: [2, 2],
+    });
+    await room.save();
+
+    await request
+      .put(`/api/v1/movies/${movie._id}/room/${room._id}`)
+      .expect(200);
+    const foundUpdatedMovie = await Movie.findOne({ _id: movie._id });
+    expect(foundUpdatedMovie.rooms).to.include(room._id);
+  });
+
+  it('should delete a movie', async () => {
+    const movie = new Movie({
+      name: 'movie 6',
+      genre: ['horror', 'thriller'],
+      duration: '1:28',
+      age: '15',
+    });
+    await movie.save();
+
+    const response = await request
+      .delete(`/api/v1/movies/${movie._id}`)
+      .expect(200);
+    expect(response.body).to.include({ status: true });
+
+    const deletedMovie = await Movie.findById(movie._id);
+    expect(deletedMovie).to.be.null;
+  });
 });

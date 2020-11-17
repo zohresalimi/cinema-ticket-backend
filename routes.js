@@ -36,22 +36,20 @@ app
   .get(movies.getOne)
   .put(movies.updateOne)
   .delete(movies.deleteOne);
-app
-  .route('/movies/:id/room/:rid')
-  .put(movies.addRoom)
-  .delete(movies.deleteRoom);
+app.route('/movies/:id/room/:rid').put(movies.addRoom);
 
 // Showing endpoints
 app.route('/showings').get(showings.getAll).post(showings.createOne);
 app.route('/showings/by-movie-id/:movieId').get(showings.getByMovieId);
 app.route('/showings/:id').put(movies.updateOne);
 
-// Ticket endpoints
+// User endpoints
 app.route('/users').get(users.getAll).post(users.createOne);
 
 // Ticket endpoints
 app.route('/ticket').get(tickets.getAll).post(tickets.createOne);
 
+// Checkout endpoints
 app.route('/checkout/create').post(checkout.createOne);
 app.route('/checkout/success/:sessionId').get(checkout.handleSuccessfulPayment);
 app.route('/checkout/cancel/:sessionId').get(checkout.handleCancelPayment);
