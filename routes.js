@@ -41,7 +41,7 @@ app.route('/movies/:id/room/:rid').put(movies.addRoom);
 // Showing endpoints
 app.route('/showings').get(showings.getAll).post(showings.createOne);
 app.route('/showings/by-movie-id/:movieId').get(showings.getByMovieId);
-app.route('/showings/:id').put(movies.updateOne);
+app.route('/showings/:id').put(showings.updateOne);
 
 // User endpoints
 app.route('/users').get(users.getAll).post(users.createOne);

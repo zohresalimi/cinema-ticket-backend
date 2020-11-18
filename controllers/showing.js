@@ -8,14 +8,6 @@ const generateEndTime = (start, duration) => {
   const [h, m] = duration.split(':');
   const durationMillis = (+h * 60 + +m) * 60 * 1000;
   const endTime = new Date(startTime + durationMillis).toISOString();
-
-  console.log(endTime);
-
-  // let hour = parseInt(splitTime[0], 10) + parseInt(splitDuration[0], 10);
-  // let minute = parseInt(splitTime[1], 10) + parseInt(splitDuration[1], 10);
-  // hour += Math.round(minute / 60);
-  // minute %= 60;
-  // const endTime = `${+hour}:${minute}`;
   return endTime;
 };
 
@@ -42,7 +34,7 @@ module.exports = {
         .populate('room')
         .exec();
       if (!response) {
-        return res.status(404).json({ message: 'Room not found' });
+        return res.status(404).json({ message: 'Movie not found' });
       }
       return res.status(200).json({ data: response });
     } catch (error) {
@@ -78,17 +70,17 @@ module.exports = {
       return res.status(500).json({ error: error.toString() });
     }
   },
-  // TODO: update showing by movie Id not whole obj
+
   async updateOne({ params, body }, res) {
     const { id } = params;
     const opt = { new: true };
     let updated = false;
     try {
-      const response = await Showing.findOne(id, body, opt);
+      const response = await Showing.findByIdAndUpdate(id, body, opt);
       if (!response) {
         return res
           .status(404)
-          .json({ status: updated, message: 'Cinema not found' });
+          .json({ status: updated, message: 'showing not found' });
       }
       updated = true;
       return res.status(200).json({ status: updated, data: response });

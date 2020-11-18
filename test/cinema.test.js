@@ -96,7 +96,8 @@ describe('Testing Cinema Route', () => {
 
     const response = await request
       .put(`/api/v1/cinemas/${cinema._id}`)
-      .send(updatedInfo);
+      .send(updatedInfo)
+      .expect(200);
     expect(response.body).to.include({ status: true });
     const foundUpdatedCinema = await Cinema.findOne({ _id: cinema._id });
     expect(foundUpdatedCinema.name).to.equal(updatedInfo.name);

@@ -36,6 +36,8 @@ describe('Testing Room Route', () => {
       seats: [2, 2],
     };
     const response = await request.post('/api/v1/rooms').send(data).expect(201);
+    expect(response.body.data.seats).to.have.lengthOf(data.seats[0]);
+    expect(response.body.data.seats[0]).to.have.lengthOf(data.seats[1]);
     expect(response.body.data._id).to.be.ok;
     expect(response.body.data.name).to.equal(data.name);
     expect(response.body.data).to.have.a.property('name');

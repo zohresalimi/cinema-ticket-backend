@@ -47,6 +47,7 @@ describe('Testing movie Route', () => {
     expect(response.body.data._id).to.be.ok;
     expect(response.body.data.name).to.equal(data.name);
     expect(response.body.data).to.have.a.property('name');
+    expect(response.body.data).to.have.a.property('duration');
   });
 
   it('should return all Movies', async () => {
@@ -86,6 +87,7 @@ describe('Testing movie Route', () => {
     const movie = new Movie({
       name: 'movie 3',
       genre: ['family', 'children'],
+      duration: '1:28',
     });
 
     await movie.save();
@@ -104,6 +106,7 @@ describe('Testing movie Route', () => {
       name: 'movie 4',
       genre: ['family', 'children'],
       premiere: '2020-01-05T15:18:52.722Z',
+      duration: '1:28',
     });
     await currentMovie.save();
 
@@ -116,6 +119,7 @@ describe('Testing movie Route', () => {
       name: 'movie 5',
       genre: ['family', 'children'],
       premiere: '2021-01-05T15:18:52.722Z',
+      duration: '1:28',
     });
     await upcomingMovie.save();
 
@@ -131,6 +135,7 @@ describe('Testing movie Route', () => {
       name: 'movie 5',
       genre: ['family', 'children'],
       premiere: '2020-01-05T15:18:52.722Z',
+      duration: '1:28',
     });
     await currentMovie.save();
 

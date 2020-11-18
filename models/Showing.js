@@ -17,7 +17,7 @@ const ShowingSchema = mongoose.Schema({
     required: true,
   },
   startTime: Date,
-  endTime: String,
+  endTime: Date,
   capacity: Number,
   price: Number,
   seats: Array,

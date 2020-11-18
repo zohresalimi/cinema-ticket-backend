@@ -15,10 +15,10 @@ module.exports = {
 
   async createOne({ body }, res) {
     try {
-      if (!body.name) {
+      if (!body.name || !body.duration) {
         return res
           .status(400)
-          .json({ message: 'Name parameter was not provided!' });
+          .json({ message: 'Name and duration parameter were not provided!' });
       }
       const response = await Movie.create(body);
       return res.status(201).json({ data: response });
@@ -81,9 +81,10 @@ module.exports = {
         premiere: { $lte: currentDate },
       }).exec();
       if (!response) {
-        return res
-          .status(404)
-          .json({ status: updated, message: 'Movie not found' });
+        return res.status(404).json({
+          status: updated,
+          message: 'Movie not found',
+        });
       }
       updated = true;
       return res.status(200).json({ status: updated, data: response });
