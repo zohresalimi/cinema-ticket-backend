@@ -8,6 +8,8 @@ const showings = require('./controllers/showing');
 const users = require('./controllers/user');
 const tickets = require('./controllers/ticket');
 const checkout = require('./controllers/checkout');
+const user = require('./controllers/user');
+// const { userAuthenticate } = require('./middleware');
 
 // Cinema endpoints
 app.route('/cinemas').get(cinemas.getAll).post(cinemas.createOne);
@@ -47,11 +49,14 @@ app.route('/showings/:id').put(showings.updateOne);
 app.route('/users').get(users.getAll).post(users.createOne);
 
 // Ticket endpoints
-app.route('/ticket').get(tickets.getAll).post(tickets.createOne);
+app.route('/tickets').get(tickets.getAll).post(tickets.createOne);
 
 // Checkout endpoints
 app.route('/checkout/create').post(checkout.createOne);
 app.route('/checkout/success/:sessionId').get(checkout.handleSuccessfulPayment);
 app.route('/checkout/cancel/:sessionId').get(checkout.handleCancelPayment);
+
+app.route('/users').get(user.getAll).post(user.createOne);
+app.route('/login').post(user.login);
 
 module.exports = app;

@@ -2,16 +2,14 @@ const stripe = require('stripe')(
   'sk_test_51HlWoOBo1w65UuRVuebqp0BmyhNUgmUhkYXL9OhRIYKLR6UYckuYhMuOLOeFAHTKjrNnrelgMVN9kPvPhikK3Vgy00FOlVynWK'
 );
 const Showing = require('../models/Showing');
-const Tickets = require('../models/Tickets');
+const Ticket = require('../models/Ticket');
 const emailService = require('./email');
 
 module.exports = {
   async createOne({ body }, res) {
     const { ticketId } = body;
     try {
-      const ticket = await Tickets.findById(ticketId)
-        .populate('showing')
-        .exec();
+      const ticket = await Ticket.findById(ticketId).populate('showing').exec();
       if (!ticket) {
         return res
           .status(404)
@@ -56,6 +54,7 @@ module.exports = {
       ticket.save();
       return res.status(200).json({ id: session.id });
     } catch (e) {
+      console.log(e);
       return res
         .status(500)
         .json({ message: 'Problem with creating checkout session', error: e });
@@ -66,7 +65,7 @@ module.exports = {
     const { sessionId } = params;
 
     try {
-      const ticket = await Tickets.findOne({ sessionId })
+      const ticket = await Ticket.findOne({ sessionId })
         .populate('showing')
         .exec();
 
@@ -85,6 +84,7 @@ module.exports = {
 
       return res.redirect('http://localhost:3000/order/cancel');
     } catch (error) {
+      console.log(error);
       return res.status(500).json({
         message: 'Problem with rolling back the ticket',
         error: error.stack,
@@ -95,7 +95,7 @@ module.exports = {
   async handleSuccessfulPayment({ params }, res) {
     const { sessionId } = params;
     try {
-      const ticket = await Tickets.findOne({ sessionId })
+      const ticket = await Ticket.findOne({ sessionId })
         .populate('showing')
         .populate('user')
         .exec();

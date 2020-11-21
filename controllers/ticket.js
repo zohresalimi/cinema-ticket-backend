@@ -1,4 +1,4 @@
-const Ticket = require('../models/Tickets');
+const Ticket = require('../models/Ticket');
 const User = require('../models/User');
 
 module.exports = {
@@ -14,19 +14,22 @@ module.exports = {
     }
   },
 
-  async getByUserId(req, res) {
-    if (!req.body.userId) {
+  async getByUserId({ params }, res) {
+    const { userId } = params;
+    console.log(`userId: ${userId}`);
+    if (!userId) {
       return res
         .status(400)
         .json({ message: 'Parameter `userId` was not provided!' });
     }
     try {
-      const response = await Ticket.find({ userId: req.body.userId });
+      const response = await Ticket.find({ user: userId });
       if (!response.length) {
         return res.status(200).json({ message: 'There is no Ticket' });
       }
       return res.status(200).json({ response });
     } catch (error) {
+      console.log(error);
       return res.status(500).json({ error: error.toString() });
     }
   },

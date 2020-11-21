@@ -9,12 +9,13 @@ const Room = require('../models/Room');
 const request = supertest(app);
 
 describe('Testing movie Route', () => {
-  before(() => {
-    connect();
+  before(async () => {
+    await connect();
   });
 
-  afterEach(() => {
+  beforeEach(() => {
     mongoose.connection.db.dropCollection('movies');
+    mongoose.connection.db.dropCollection('rooms');
   });
 
   after(async () => {

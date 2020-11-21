@@ -8,12 +8,12 @@ const Cinema = require('../models/Cinema');
 const request = supertest(app);
 
 describe('Testing Cinema Route', () => {
-  before(() => {
-    connect();
+  before(async () => {
+    await connect();
   });
 
-  afterEach(() => {
-    mongoose.connection.db.dropCollection('movies');
+  beforeEach(() => {
+    mongoose.connection.db.dropCollection('cinemas');
   });
 
   after(async () => {

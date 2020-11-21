@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const { generateAccessToken } = require('../utils');
 
 module.exports = {
   async getAll(req, res) {
@@ -18,6 +19,20 @@ module.exports = {
     try {
       const user = await User.create({ email });
       return res.status(201).json({ user, message: 'user is created' });
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+
+  async login(req, res) {
+    const { email } = req.body;
+    try {
+      const user = await User.findOne({ email });
+      if (!user) {
+        return res.status(201).json({ user, message: 'email is incorrect' });
+      }
+      const accessToken = generateAccessToken(email);
+      return res.json({ accessToken });
     } catch (error) {
       throw new Error(error);
     }
