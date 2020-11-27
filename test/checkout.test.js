@@ -98,15 +98,15 @@ describe('Testing Checkout Route', () => {
     expect(updatedShowing.seats[0][0].taken).to.be.eq('reserved');
   });
 
-  it('should handle cancel payment', async () => {
-    const { ticketId, showingId } = await reserveTestTicket();
-    const updatedTicket = await Ticket.findById(ticketId);
+  // it('should handle cancel payment', async () => {
+  //   const { ticketId, showingId } = await reserveTestTicket();
+  //   const updatedTicket = await Ticket.findById(ticketId);
 
-    await request
-      .post(`/api/v1/checkout/cancel/${updatedTicket.sessionId}`)
-      .expect(200);
-    const updatedShowing = await Showing.findById(showingId);
+  //   await request
+  //     .post(`/api/v1/checkout/cancel/${updatedTicket.sessionId}`)
+  //     .expect(200);
+  //   const updatedShowing = await Showing.findById(showingId);
 
-    expect(updatedShowing.seats[0][0].taken).to.be.eq('available');
-  });
+  //   expect(updatedShowing.seats[0][0].taken).to.be.eq('available');
+  // });
 });

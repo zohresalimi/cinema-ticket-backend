@@ -12,6 +12,27 @@ module.exports = {
       return res.status(500).json({ error: error.toString() });
     }
   },
+  async searchOne(req, res) {
+    try {
+      const response = await Movie.aggregate([
+        {
+          $search: {
+            autocomplete: {
+              query: `${req.query.query}`,
+              path: 'name',
+              fuzzy: {
+                maxEdits: 2,
+                prefixLength: 1,
+              },
+            },
+          },
+        },
+      ]).project('name id genre coverImage premiere');
+      return res.status(200).json({ response });
+    } catch (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+  },
 
   async createOne({ body }, res) {
     try {

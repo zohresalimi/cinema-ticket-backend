@@ -30,6 +30,7 @@ app
 
 // Movies endpoints
 app.route('/movies').get(movies.getAll).post(movies.createOne);
+app.route('/movies/search').get(movies.searchOne);
 app.route('/movies/by-genre').get(movies.getByGenre);
 app.route('/movies/current-movie').get(movies.getCurrentPremiere);
 app.route('/movies/upcoming').get(movies.getByUpcoming);

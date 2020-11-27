@@ -11,10 +11,8 @@ const envFiles = {
 require('dotenv').config({ path: envFiles[process.env.NODE_ENV] });
 
 const config = {
-  database: {
-    name: 'dev-cinema-ticket',
-  },
-  dropDatabase: true,
+  database: process.env.MONGO_URI,
+  dropDatabase: false,
   dropCollections: true,
 };
 
