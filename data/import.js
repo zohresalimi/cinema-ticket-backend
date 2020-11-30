@@ -5,9 +5,9 @@ const path = require('path');
 
 const envFiles = {
   development: '.env',
+  production: '.env.production',
   test: '.env.test',
 };
-
 require('dotenv').config({ path: envFiles[process.env.NODE_ENV] });
 
 const config = {
@@ -16,11 +16,12 @@ const config = {
   dropCollections: true,
 };
 
+console.log(config);
 const seeder = new Seeder(config);
 const collections = seeder.readCollectionsFromPath(path.resolve('./data'));
 (async () => {
   try {
-    console.log('preloading Test Data');
+    console.log('preloading Test Data...');
     await seeder.import(collections);
     console.log('data was successfully imported');
   } catch (e) {
