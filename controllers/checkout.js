@@ -1,6 +1,4 @@
-const stripe = require('stripe')(
-  'sk_test_51HlWoOBo1w65UuRVuebqp0BmyhNUgmUhkYXL9OhRIYKLR6UYckuYhMuOLOeFAHTKjrNnrelgMVN9kPvPhikK3Vgy00FOlVynWK'
-);
+const stripe = require('stripe')(process.env.STRIPE_URL);
 const Showing = require('../models/Showing');
 const Ticket = require('../models/Ticket');
 const emailService = require('./email');
@@ -44,10 +42,8 @@ module.exports = {
           },
         ],
         mode: 'payment',
-        success_url:
-          'http://localhost:8080/api/v1/checkout/success/{CHECKOUT_SESSION_ID}',
-        cancel_url:
-          'http://localhost:8080/api/v1/checkout/cancel/{CHECKOUT_SESSION_ID}',
+        success_url: `${process.env.CHECKOUT_BASE_URL}/checkout/success/{CHECKOUT_SESSION_ID}`,
+        cancel_url: `${process.env.CHECKOUT_BASE_URL}/checkout/cancel/{CHECKOUT_SESSION_ID}`,
       });
 
       ticket.sessionId = session.id;
@@ -81,7 +77,7 @@ module.exports = {
         capacity: ticket.showing.capacity + ticket.quantity,
       });
 
-      return res.redirect('http://localhost:3000/order/cancel');
+      return res.redirect(`${process.env.BASE_URL}/order/cancel`);
     } catch (error) {
       return res.status(500).json({
         message: 'Problem with rolling back the ticket',
@@ -115,7 +111,7 @@ module.exports = {
       await ticket.save();
       await emailService.sendTicketToGuestUser(ticket);
 
-      return res.redirect('http://localhost:3000/order/success');
+      return res.redirect(`${process.env.BASE_URL}/order/success`);
     } catch (error) {
       return res.status(500).json({
         message: 'Problem with updating ticket by session',

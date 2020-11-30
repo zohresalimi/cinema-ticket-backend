@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const envFiles = {
-  development: '.env.development',
+  development: '.env',
   production: '.env.production',
   test: '.env.test',
 };
