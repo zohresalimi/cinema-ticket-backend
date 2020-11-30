@@ -16,7 +16,6 @@ module.exports = {
 
   async getByUserId({ params }, res) {
     const { userId } = params;
-    console.log(`userId: ${userId}`);
     if (!userId) {
       return res
         .status(400)
@@ -29,7 +28,6 @@ module.exports = {
       }
       return res.status(200).json({ response });
     } catch (error) {
-      console.log(error);
       return res.status(500).json({ error: error.toString() });
     }
   },

@@ -54,7 +54,6 @@ module.exports = {
       ticket.save();
       return res.status(200).json({ id: session.id });
     } catch (e) {
-      console.log(e);
       return res
         .status(500)
         .json({ message: 'Problem with creating checkout session', error: e });
@@ -84,7 +83,6 @@ module.exports = {
 
       return res.redirect('http://localhost:3000/order/cancel');
     } catch (error) {
-      console.log(error);
       return res.status(500).json({
         message: 'Problem with rolling back the ticket',
         error: error.stack,
