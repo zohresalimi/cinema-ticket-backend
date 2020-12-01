@@ -12,6 +12,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [10.x]
+        mongodb-version: [4.2]
+
     steps:
       - uses: actions/checkout@v2
         name: Checkout branch
