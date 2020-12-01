@@ -15,6 +15,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Checkout branch
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: supercharge/mongodb-github-action@1.3.0
+        name: Starting MongoDB
+        with:
+          mongodb-version: ${{ matrix.mongodb-version }}
 
       - name: Lint
         run: |
@@ -23,6 +31,5 @@ jobs:
 
       - name: Test
         run: npm run test
-
-      - name: Build
-        run: npm run build
+        env:
+          MONGO_URI: mongodb://localhost:27017/cinema-ticket
