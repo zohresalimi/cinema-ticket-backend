@@ -1,7 +1,7 @@
 const supertest = require('supertest');
 const mongoose = require('mongoose');
 const { expect } = require('chai');
-const app = require('../app');
+const createApp = require('../app');
 const nock = require('nock');
 const { connect } = require('../config/database');
 
@@ -63,6 +63,7 @@ describe('Testing Checkout Route', () => {
   let request;
 
   before(async () => {
+    const app = createApp();
     request = supertest(app);
     await connect();
   });

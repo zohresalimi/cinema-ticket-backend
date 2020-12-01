@@ -1,11 +1,12 @@
 const supertest = require('supertest');
 const mongoose = require('mongoose');
 const { expect } = require('chai');
-const app = require('../app');
+const createApp = require('../app');
 const { connect } = require('../config/database');
 const Movie = require('../models/Movie');
 const Room = require('../models/Room');
 
+const app = createApp();
 const request = supertest(app);
 
 describe('Testing movie Route', () => {
@@ -52,7 +53,7 @@ describe('Testing movie Route', () => {
   });
 
   it('should return all Movies', async () => {
-    const movie = new Movie({
+    const movie = await Movie.create({
       name: 'movie 1',
       genre: ['horror', 'thriller'],
       duration: '1:28',
@@ -61,14 +62,14 @@ describe('Testing movie Route', () => {
       premiere: '2020-10-05T15:18:52.722Z',
       rooms: ['5fa700379bae0e19e2463e8d', '5fa7002a7d8e0ebd4e8d866b'],
     });
-    await movie.save();
+
     const res = await request.get('/api/v1/movies').expect(200);
     expect(res.body.response[0]).to.be.an('object');
     expect(res.body.response[0].name).to.equal(movie.name);
   });
 
   it('should return one movie by Id', async () => {
-    const movie = new Movie({
+    const movie = await Movie.create({
       name: 'movie 2',
       genre: ['horror', 'thriller'],
       duration: '1:28',
@@ -77,7 +78,7 @@ describe('Testing movie Route', () => {
       premiere: '2020-10-05T15:18:52.722Z',
       rooms: ['5fa700379bae0e19e2463e8d', '5fa7002a7d8e0ebd4e8d866b'],
     });
-    await movie.save();
+
     const id = movie._id.toString();
     const response = await request.get(`/api/v1/movies/${id}`).expect(200);
     const { data } = response.body;
@@ -85,13 +86,12 @@ describe('Testing movie Route', () => {
   });
 
   it('should return movies by genre', async () => {
-    const movie = new Movie({
+    const movie = await Movie.create({
       name: 'movie 3',
       genre: ['family', 'children'],
       duration: '1:28',
     });
 
-    await movie.save();
     const genre = ['family', 'children'];
     const response = await request
       .get('/api/v1/movies/by-genre')
@@ -103,26 +103,24 @@ describe('Testing movie Route', () => {
   });
 
   it('should return empty if there is no upcoming movie', async () => {
-    const currentMovie = new Movie({
+    const currentMovie = await Movie.create({
       name: 'movie 4',
       genre: ['family', 'children'],
       premiere: '2020-01-05T15:18:52.722Z',
       duration: '1:28',
     });
-    await currentMovie.save();
 
     const response = await request.get('/api/v1/movies/upcoming').expect(200);
     expect(response.body).to.have.not.property('data');
   });
 
   it('should return upcoming movies', async () => {
-    const upcomingMovie = new Movie({
+    const upcomingMovie = await Movie.create({
       name: 'movie 5',
       genre: ['family', 'children'],
       premiere: '2021-01-05T15:18:52.722Z',
       duration: '1:28',
     });
-    await upcomingMovie.save();
 
     const upcomingResponse = await request
       .get('/api/v1/movies/upcoming')
@@ -132,13 +130,12 @@ describe('Testing movie Route', () => {
   });
 
   it('should return current movies', async () => {
-    const currentMovie = new Movie({
+    const currentMovie = await Movie.create({
       name: 'movie 5',
       genre: ['family', 'children'],
       premiere: '2020-01-05T15:18:52.722Z',
       duration: '1:28',
     });
-    await currentMovie.save();
 
     const response = await request
       .get('/api/v1/movies/current-movie')
@@ -148,7 +145,7 @@ describe('Testing movie Route', () => {
   });
 
   it('should update a movie', async () => {
-    const movie = new Movie({
+    const movie = await Movie.create({
       name: 'movie 5',
       description:
         'A popular influencer and his friends travel the world and film themselves in extreme situations. In Russia, they are invited to a mysterious escape room by an eccentric millionaire and see a given video success on social media in front of them. But no likes in the world can buy them free from the nightmare that awaits',
@@ -157,7 +154,6 @@ describe('Testing movie Route', () => {
       duration: '1:28',
       age: '15',
     });
-    await movie.save();
 
     const updatedInfo = {
       name: 'follow me',
@@ -173,21 +169,19 @@ describe('Testing movie Route', () => {
   });
 
   it('should add a room to a movie', async () => {
-    const movie = new Movie({
+    const movie = await Movie.create({
       name: 'movie 5',
       genre: ['horror', 'thriller'],
       duration: '1:28',
       age: '15',
     });
-    await movie.save();
 
-    const room = new Room({
+    const room = await Room.create({
       name: 'filmstaden',
       capacity: 4,
       cinema: '5fa653c0643c06586bba7d78',
       seats: [2, 2],
     });
-    await room.save();
 
     await request
       .put(`/api/v1/movies/${movie._id}/room/${room._id}`)
@@ -197,13 +191,12 @@ describe('Testing movie Route', () => {
   });
 
   it('should delete a movie', async () => {
-    const movie = new Movie({
+    const movie = await Movie.create({
       name: 'movie 6',
       genre: ['horror', 'thriller'],
       duration: '1:28',
       age: '15',
     });
-    await movie.save();
 
     const response = await request
       .delete(`/api/v1/movies/${movie._id}`)

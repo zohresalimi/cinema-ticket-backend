@@ -1,11 +1,12 @@
 const supertest = require('supertest');
 const mongoose = require('mongoose');
 const { expect } = require('chai');
-const app = require('../app');
+const createApp = require('../app');
 const { connect } = require('../config/database');
 const Room = require('../models/Room');
 const Cinema = require('../models/Cinema');
 
+const app = createApp();
 const request = supertest(app);
 
 describe('Testing Room Route', () => {

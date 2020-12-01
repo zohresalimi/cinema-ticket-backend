@@ -1,11 +1,12 @@
 const supertest = require('supertest');
 const mongoose = require('mongoose');
 const { expect } = require('chai');
-const app = require('../app');
+const createApp = require('../app');
 const { connect } = require('../config/database');
 const Ticket = require('../models/Ticket');
 const User = require('../models/User');
 
+const app = createApp();
 const request = supertest(app);
 
 describe('Testing Ticket Route', () => {

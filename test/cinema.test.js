@@ -1,10 +1,11 @@
 const supertest = require('supertest');
 const mongoose = require('mongoose');
 const { expect } = require('chai');
-const app = require('../app');
+const createApp = require('../app');
 const { connect } = require('../config/database');
 const Cinema = require('../models/Cinema');
 
+const app = createApp();
 const request = supertest(app);
 
 describe('Testing Cinema Route', () => {
@@ -16,7 +17,7 @@ describe('Testing Cinema Route', () => {
     mongoose.connection.db.dropCollection('cinemas');
   });
 
-  after(async () => {
+  after(() => {
     mongoose.connection.close();
   });
 
@@ -48,7 +49,7 @@ describe('Testing Cinema Route', () => {
 
   it('should return one cinema by Id', async () => {
     const expectedCinema = new Cinema({
-      name: 'filmstadene',
+      name: 'filmstaden',
       purchaseStartTime: '8:00',
       purchaseEndTime: '21:30',
     });
@@ -60,13 +61,15 @@ describe('Testing Cinema Route', () => {
   });
 
   it('should return one cinema by Room Ids', async () => {
-    const expectedCinema = new Cinema({
+    const expectedCinema = await Cinema.create({
       name: 'filmstadene',
       purchaseStartTime: '8:00',
       purchaseEndTime: '21:30',
       rooms: ['5fa653c0643c06586bba7d78'],
     });
-    await expectedCinema.save();
+
+    console.log('expected cinema: ', expectedCinema);
+    console.log('Room Ids: ', expectedCinema.rooms.join(','));
 
     const response = await request
       .get(`/api/v1/cinemas/by-room-ids`)
@@ -74,6 +77,7 @@ describe('Testing Cinema Route', () => {
         rooms: expectedCinema.rooms.join(','),
       })
       .expect(200);
+    console.log('Response: ', response.body);
     expect(response.body).to.be.an('object');
     expect(response.body.data[0]).to.deep.nested.include({
       rooms: ['5fa653c0643c06586bba7d78'],
@@ -94,6 +98,7 @@ describe('Testing Cinema Route', () => {
       purchaseEndTime: '21:30',
     };
 
+    console.log(`Updating this cinema: "/api/v1/cinemas/${cinema._id}"`);
     const response = await request
       .put(`/api/v1/cinemas/${cinema._id}`)
       .send(updatedInfo)
@@ -111,6 +116,7 @@ describe('Testing Cinema Route', () => {
     });
     await cinema.save();
 
+    console.log(`Deleting this cinema: "/api/v1/cinemas/${cinema._id}"`);
     const response = await request
       .delete(`/api/v1/cinemas/${cinema._id}`)
       .expect(200);
