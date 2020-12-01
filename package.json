@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha --recursive test/ --timeout 10000",
     "dev": "cross-env NODE_ENV=development nodemon",
-    "start": "cross-env NODE_ENV=production node src/index.js",
+    "start": "cross-env NODE_ENV=production node index.js",
     "lint": "eslint \"**/*.js\"",
     "seed": "node data/import.js"
   },
