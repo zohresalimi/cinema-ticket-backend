@@ -25,6 +25,12 @@ module.exports = {
             .map((col) => col + 1)
             .join('-')}</strong></li>`
       )}</ul>`;
+
+      const convertDate = (date) =>
+        `${date.getFullYear()}-${
+          date.getMonth() + 1
+        }-${date.getDate()}/${date.getHours()}:${date.getMinutes()}`;
+
       const data = {
         service_id: SERVICE_ID,
         template_id: TEMPLATE_ID,
@@ -34,12 +40,12 @@ module.exports = {
           fromName: 'Cinema Ticket',
           movieName,
           roomName,
-          createdAt,
+          createdAt: convertDate(createdAt),
           movieCover,
           seats,
           quantity,
           cinemaName,
-          showingTime: showing.startTime,
+          showingTime: convertDate(showing.startTime),
         },
       };
       const response = await Axios({

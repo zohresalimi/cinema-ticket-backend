@@ -105,7 +105,6 @@ module.exports = {
         $set: {
           seats: ticket.showing.seats,
         },
-        capacity: ticket.showing.capacity - ticket.quantity,
       });
 
       await ticket.save();

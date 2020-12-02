@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 
-require('dotenv').config();
+const envFiles = {
+  development: '.env.development',
+  production: '.env.production',
+  test: '.env.test',
+};
+
+require('dotenv').config({ path: envFiles[process.env.NODE_ENV] });
 
 const connect = async () => {
   const mongoConnectionString = process.env.MONGO_URI;

@@ -11,7 +11,7 @@
         "director":"will wernick",
         "premiere":"2020-10-05T15:18:52.722Z",
         "actors":["Holland Roden" ,"Ronen Rubinstein" ,"Keegan Allen"],
-        "originalTitle": "English",
+        "originalTitle": "english",
         "images": [],
         "rooms":[{ "$oid": "5fa700379bae0e19e2463e8d"},{ "$oid": "5fa7002a7d8e0ebd4e8d866b"}],
         "_id":{ "$oid": "5fa717f00e365a5bd26a6e2d"}
@@ -28,7 +28,7 @@
         "director":"christopher nolan",
         "premiere":"2020-09-05T15:18:52.722Z",
         "actors":["John David Washington","Robert Pattinson "],
-        "originalTitle": "English",
+        "originalTitle": "english",
         "images": [],
         "rooms":[{ "$oid": "5fa653d0a7f1201999dd1ac0"},{ "$oid": "5fa741b0cb2a200126f8d045"}],
         "_id":{ "$oid": "5fa717fb36f364f249ef0995"}
@@ -46,7 +46,7 @@
         "director":"jacob chase",
         "premiere":"2020-10-03T15:18:52.722Z",
         "actors":["Holland Roden" ,"Ronen Rubinstein" ,"Keegan Allen"],
-        "originalTitle": "English",
+        "originalTitle": "english",
         "images": [],
         "rooms":[{ "$oid": "5fa65403be2034a6cc97c3b8"},{ "$oid": "5fa653dae5c30b268921a81f"}],
         "_id":{ "$oid": "5fa7180f1a539cd8ddf06f7c"}
@@ -97,7 +97,7 @@
         "director":"jacob chase",
         "premiere":"2021-01-03T15:18:52.722Z",
         "actors":["Holland Roden" ,"Ronen Rubinstein" ,"Keegan Allen"],
-        "originalTitle": "English",
+        "originalTitle": "english",
         "images": [],
         "rooms":[],
         "_id":{ "$oid": "5fa718f47bfad5ea75f386e9"}
@@ -114,7 +114,7 @@
         "director":"Will Wernick",
         "premiere":"2020-12-05T15:18:52.722Z",
         "actors":["Holland Roden" ,"Ronen Rubinstein" ,"Keegan Allen"],
-        "originalTitle": "English",
+        "originalTitle": "english",
         "images": [],
         "rooms":[],
         "_id":{ "$oid": "5fa719018a09fc15b99885c0"}
@@ -131,7 +131,7 @@
         "director":"joe wright",
         "premiere":"2021-01-05T15:18:52.722Z",
         "actors":["Holland Roden" ,"Ronen Rubinstein" ,"Keegan Allen"],
-        "originalTitle": "English",
+        "originalTitle": "english",
         "images": [],
         "rooms":[],
         "_id":{ "$oid": "5fa7190d1f8200edc9345fa6"}

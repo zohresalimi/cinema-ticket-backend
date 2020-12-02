@@ -3,10 +3,18 @@ process.env.DEBUG = 'mongo-seeding';
 const { Seeder } = require('mongo-seeding');
 const path = require('path');
 
-require('dotenv').config();
+const envFiles = {
+  development: '.env.development',
+  production: '.env.production',
+  test: '.env.test',
+};
+
+require('dotenv').config({ path: envFiles[process.env.NODE_ENV] });
+
+const mongoConnectionString = process.env.MONGO_URI;
 
 const config = {
-  database: process.env.MONGO_URI,
+  database: mongoConnectionString,
   dropDatabase: false,
   dropCollections: true,
 };

@@ -67,17 +67,12 @@ describe('Testing Cinema Route', () => {
       purchaseEndTime: '21:30',
       rooms: ['5fa653c0643c06586bba7d78'],
     });
-
-    console.log('expected cinema: ', expectedCinema);
-    console.log('Room Ids: ', expectedCinema.rooms.join(','));
-
     const response = await request
       .get(`/api/v1/cinemas/by-room-ids`)
       .query({
         rooms: expectedCinema.rooms.join(','),
       })
       .expect(200);
-    console.log('Response: ', response.body);
     expect(response.body).to.be.an('object');
     expect(response.body.data[0]).to.deep.nested.include({
       rooms: ['5fa653c0643c06586bba7d78'],
@@ -98,7 +93,6 @@ describe('Testing Cinema Route', () => {
       purchaseEndTime: '21:30',
     };
 
-    console.log(`Updating this cinema: "/api/v1/cinemas/${cinema._id}"`);
     const response = await request
       .put(`/api/v1/cinemas/${cinema._id}`)
       .send(updatedInfo)
@@ -116,7 +110,6 @@ describe('Testing Cinema Route', () => {
     });
     await cinema.save();
 
-    console.log(`Deleting this cinema: "/api/v1/cinemas/${cinema._id}"`);
     const response = await request
       .delete(`/api/v1/cinemas/${cinema._id}`)
       .expect(200);
