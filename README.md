@@ -69,3 +69,11 @@ ACCESS_TOKEN=cinemaTicketSmartCoding
 - quantity,
 - cinemaName,
 - showingTime,
+
+### Seed MongoDB
+
+The main purpose of Mongo Seeding is preparing a ready-to-go development environment for our application. For this reason, follow this:
+
+```sh
+npm run seed-dev
+```
