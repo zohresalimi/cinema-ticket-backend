@@ -46,7 +46,7 @@ module.exports = {
         .populate('room')
         .exec();
       if (!response) {
-        return res.status(404).json({ message: 'Room not found' });
+        return res.status(404).json({ message: 'Cinema not found' });
       }
       return res.status(200).json({ data: response });
     } catch (error) {
